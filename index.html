@@ -3,76 +3,232 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hipertrofia Inteligente</title>
+<title>Metodologia MKS</title>
+
 <style>
-body{
+*{
 margin:0;
-font-family:Arial, sans-serif;
-background:#111;
-color:white;
-text-align:center;
+padding:0;
+box-sizing:border-box;
 }
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+background:#0d0d0d;
+color:#ffffff;
+line-height:1.6;
+}
+
 header{
-padding:60px 20px;
-background:#1a1a1a;
+background:linear-gradient(135deg,#0d0d0d,#111,#0f2b1d);
+padding:80px 20px;
+text-align:center;
+border-bottom:1px solid #1e1e1e;
 }
-h1{
-font-size:48px;
-margin-bottom:10px;
+
+header h1{
+font-size:52px;
+margin-bottom:15px;
+color:#ffffff;
 }
-p{
-font-size:20px;
-color:#ccc;
-}
-section{
-padding:50px 20px;
-max-width:900px;
+
+header p{
+font-size:22px;
+max-width:850px;
 margin:auto;
+color:#cfcfcf;
 }
-.card{
-background:#222;
-padding:25px;
-margin:15px 0;
-border-radius:12px;
+
+.buttons{
+margin-top:35px;
 }
-button{
-padding:15px 30px;
-font-size:18px;
-border:none;
+
+.buttons a{
+display:inline-block;
+margin:10px;
+padding:14px 28px;
+text-decoration:none;
 border-radius:8px;
-cursor:pointer;
-background:#00c26e;
+font-weight:bold;
+transition:0.3s;
+}
+
+.btn-green{
+background:#18b15a;
 color:white;
 }
-button:hover{
-opacity:0.9;
+
+.btn-green:hover{
+background:#14994d;
+}
+
+.btn-dark{
+border:1px solid #18b15a;
+color:#18b15a;
+}
+
+.btn-dark:hover{
+background:#18b15a;
+color:white;
+}
+
+section{
+max-width:1150px;
+margin:auto;
+padding:70px 20px;
+}
+
+.section-title{
+font-size:38px;
+margin-bottom:20px;
+color:#18b15a;
+}
+
+.section-text{
+font-size:18px;
+color:#d0d0d0;
+margin-bottom:30px;
+max-width:900px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+}
+
+.card{
+background:#171717;
+padding:28px;
+border-radius:14px;
+border:1px solid #222;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+border-color:#18b15a;
+}
+
+.card h3{
+margin-bottom:14px;
+font-size:24px;
+color:#ffffff;
+}
+
+.card p{
+color:#c8c8c8;
+font-size:16px;
+}
+
+.quote{
+background:#111;
+padding:35px;
+border-left:4px solid #18b15a;
+border-radius:10px;
+font-size:22px;
+color:#e8e8e8;
+margin-top:20px;
+}
+
+footer{
+text-align:center;
+padding:35px 20px;
+border-top:1px solid #1f1f1f;
+color:#9e9e9e;
+font-size:15px;
+margin-top:40px;
+}
+
+@media(max-width:768px){
+
+header h1{
+font-size:38px;
+}
+
+header p{
+font-size:18px;
+}
+
+.section-title{
+font-size:30px;
+}
+
+.quote{
+font-size:19px;
+}
+
 }
 </style>
 </head>
+
 <body>
 
 <header>
-<h1>Hipertrofia Inteligente</h1>
-<p>Ciência aplicada à construção muscular.</p>
-<button>Entrar</button>
+<h1>Metodologia MKS</h1>
+<p>Hipertrofia baseada em evidência para quem busca evolução real.</p>
+
+<div class="buttons">
+<a href="#" class="btn-green">Biblioteca Científica</a>
+<a href="#" class="btn-dark">Consultoria MKS</a>
+</div>
 </header>
 
 <section>
+<h2 class="section-title">Biblioteca Científica MKS</h2>
+<p class="section-text">
+Estudos explicados com aplicação prática, interpretação crítica e direcionamento real para hipertrofia.
+</p>
+
+<div class="grid">
 <div class="card">
-<h2>Biblioteca Científica</h2>
-<p>Estudos explicados com aplicação prática.</p>
+<h3>Volume de Treino</h3>
+<p>Quantas séries realmente importam para crescer.</p>
 </div>
 
 <div class="card">
-<h2>Consultoria</h2>
-<p>Treinamento personalizado baseado em evidência.</p>
+<h3>Falha Muscular</h3>
+<p>Quando utilizar e quando evitar.</p>
 </div>
 
 <div class="card">
-<h2>Artigos</h2>
-<p>Conteúdo profundo sobre treino, dieta e performance.</p>
+<h3>Deload</h3>
+<p>Necessidade real ou exagero comum?</p>
+</div>
+
+<div class="card">
+<h3>Frequência</h3>
+<p>Treinar 1x, 2x ou mais por semana?</p>
+</div>
 </div>
 </section>
+
+<section>
+<h2 class="section-title">Consultoria MKS</h2>
+<p class="section-text">
+Treinamento personalizado baseado em evidência, individualidade biológica e progresso contínuo.
+</p>
+</section>
+
+<section>
+<h2 class="section-title">Mentalidade de Evolução</h2>
+
+<div class="quote">
+Consistência vence impulso. Método vence ego. Evolução exige tempo, inteligência e disciplina.
+</div>
+</section>
+
+<section>
+<h2 class="section-title">Sobre</h2>
+<p class="section-text">
+A Metodologia MKS nasce da busca contínua por evolução física e intelectual dentro da hipertrofia. 
+Estudo constante, aplicação prática e foco em resultados reais formam a base deste projeto.
+</p>
+</section>
+
+<footer>
+© 2026 Metodologia MKS • Evolução baseada em evidência
+</footer>
 
 </body>
 </html>
