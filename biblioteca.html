@@ -1,0 +1,665 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Biblioteca Científica — MKS</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#0b0b0b;
+    color:#fff;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 6%;
+
+    background:#0b0b0b;
+    border-bottom:1px solid #222;
+}
+
+.logo{
+    font-size:20px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#18b15a;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav a{
+    color:#ccc;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#18b15a;
+}
+
+main{
+    max-width:1200px;
+    margin:auto;
+    padding:90px 20px;
+}
+
+.tag{
+    color:#18b15a;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:3px;
+    margin-bottom:15px;
+}
+
+h1{
+    font-size:58px;
+    margin-bottom:20px;
+}
+
+.intro{
+    color:#aaa;
+    font-size:18px;
+    max-width:750px;
+    margin-bottom:45px;
+}
+
+
+/* =========================
+   PESQUISA
+========================= */
+
+.search{
+    margin-bottom:35px;
+}
+
+.search input{
+    width:100%;
+
+    padding:18px 20px;
+
+    background:#141414;
+    color:#fff;
+
+    border:1px solid #292929;
+    border-radius:10px;
+
+    outline:none;
+
+    font-size:16px;
+
+    transition:.3s;
+}
+
+.search input:focus{
+    border-color:#18b15a;
+}
+
+.results{
+    color:#888;
+    font-size:14px;
+    margin-top:12px;
+}
+
+
+/* =========================
+   CATEGORIAS
+========================= */
+
+.library-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:15px;
+}
+
+.library-card{
+
+    min-height:210px;
+
+    padding:30px;
+
+    background:#141414;
+
+    border:1px solid #242424;
+
+    border-radius:12px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.library-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#18b15a;
+
+    background:#171717;
+}
+
+.number{
+
+    color:#18b15a;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    margin-bottom:auto;
+}
+
+.library-card h2{
+
+    font-size:25px;
+
+    margin-bottom:8px;
+}
+
+.library-card p{
+
+    color:#888;
+
+    font-size:14px;
+}
+
+
+/* =========================
+   ESTUDOS
+========================= */
+
+.study-results{
+
+    margin-top:40px;
+
+    display:none;
+
+}
+
+.study{
+
+    background:#141414;
+
+    border:1px solid #242424;
+
+    border-radius:10px;
+
+    padding:25px;
+
+    margin-bottom:15px;
+}
+
+.study h3{
+
+    margin-bottom:8px;
+}
+
+.study p{
+
+    color:#999;
+
+    font-size:14px;
+}
+
+footer{
+
+    text-align:center;
+
+    padding:30px;
+
+    border-top:1px solid #222;
+
+    color:#777;
+
+    font-size:13px;
+}
+
+
+@media(max-width:800px){
+
+    nav{
+
+        flex-direction:column;
+
+        gap:15px;
+    }
+
+    nav ul{
+
+        gap:15px;
+    }
+
+    h1{
+
+        font-size:42px;
+    }
+
+    .library-grid{
+
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<nav>
+
+    <div class="logo">
+        METODOLOGIA <span>MKS</span>
+    </div>
+
+    <ul>
+
+        <li>
+            <a href="biblioteca.html">
+                Biblioteca
+            </a>
+        </li>
+
+        <li>
+            <a href="consultoria.html">
+                Consultoria
+            </a>
+        </li>
+
+        <li>
+            <a href="industries.html">
+                Industries
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+<main>
+
+    <div class="tag">
+        01 / BIBLIOTECA CIENTÍFICA
+    </div>
+
+    <h1>
+        Conhecimento organizado.
+    </h1>
+
+    <p class="intro">
+
+        Estudos, conceitos e análises sobre hipertrofia
+        e treinamento, organizados por temas.
+
+    </p>
+
+
+    <!-- PESQUISA -->
+
+    <div class="search">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Pesquisar na biblioteca..."
+        >
+
+        <div
+            class="results"
+            id="resultsMessage"
+        ></div>
+
+    </div>
+
+
+    <!-- CATEGORIAS -->
+
+    <div
+        class="library-grid"
+        id="categories"
+    >
+
+        <div class="library-card">
+
+            <div class="number">
+                01
+            </div>
+
+            <h2>
+                Volume de Treino
+            </h2>
+
+            <p>
+                Séries, dose-resposta e hipertrofia.
+            </p>
+
+        </div>
+
+
+        <div class="library-card">
+
+            <div class="number">
+                02
+            </div>
+
+            <h2>
+                Frequência
+            </h2>
+
+            <p>
+                Distribuição dos estímulos.
+            </p>
+
+        </div>
+
+
+        <div class="library-card">
+
+            <div class="number">
+                03
+            </div>
+
+            <h2>
+                Recuperação
+            </h2>
+
+            <p>
+                Fadiga, descanso e adaptação.
+            </p>
+
+        </div>
+
+
+        <div class="library-card">
+
+            <div class="number">
+                04
+            </div>
+
+            <h2>
+                Falha Muscular
+            </h2>
+
+            <p>
+                Proximidade da falha e intensidade.
+            </p>
+
+        </div>
+
+
+        <div class="library-card">
+
+            <div class="number">
+                05
+            </div>
+
+            <h2>
+                Progressão
+            </h2>
+
+            <p>
+                Estratégias para evolução.
+            </p>
+
+        </div>
+
+
+        <div class="library-card">
+
+            <div class="number">
+                06
+            </div>
+
+            <h2>
+                Seleção de Exercícios
+            </h2>
+
+            <p>
+                Biomecânica e escolha dos movimentos.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!--
+        FUTUROS ESTUDOS
+
+        É aqui que futuramente vamos
+        cadastrar os estudos.
+    -->
+
+    <div
+        class="study-results"
+        id="studyResults"
+    >
+
+        <!--
+        Exemplo futuro:
+
+        <div class="study">
+
+            <h3>
+                Título do estudo
+            </h3>
+
+            <p>
+                Categoria: Recuperação
+            </p>
+
+            <p>
+                Tags: dano muscular, fadiga,
+                recuperação
+            </p>
+
+        </div>
+        -->
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    © 2026 Metodologia MKS
+
+</footer>
+
+
+<script>
+
+/*
+==================================================
+BASE DA BIBLIOTECA
+
+Por enquanto não existem estudos cadastrados.
+
+Depois vamos colocar os estudos dentro
+desta estrutura.
+==================================================
+*/
+
+const studies = [
+
+    /*
+    EXEMPLO FUTURO:
+
+    {
+        title: "Título do estudo",
+
+        category: "Recuperação",
+
+        description:
+        "Descrição resumida do estudo.",
+
+        tags: [
+            "dano muscular",
+            "recuperação",
+            "fadiga"
+        ]
+    }
+
+    */
+
+];
+
+
+const searchInput =
+    document.getElementById("searchInput");
+
+const resultsMessage =
+    document.getElementById("resultsMessage");
+
+const categories =
+    document.getElementById("categories");
+
+const studyResults =
+    document.getElementById("studyResults");
+
+
+searchInput.addEventListener(
+    "input",
+    function(){
+
+        const search =
+            this.value
+            .toLowerCase()
+            .trim();
+
+
+        /* Pesquisa vazia */
+
+        if(search === ""){
+
+            categories.style.display =
+                "grid";
+
+            studyResults.style.display =
+                "none";
+
+            resultsMessage.textContent =
+                "";
+
+            return;
+        }
+
+
+        /* Filtra os estudos */
+
+        const filtered =
+            studies.filter(study => {
+
+                const content = (
+
+                    study.title +
+                    " " +
+                    study.category +
+                    " " +
+                    study.description +
+                    " " +
+                    study.tags.join(" ")
+
+                ).toLowerCase();
+
+
+                return content.includes(search);
+
+            });
+
+
+        /* Esconde categorias
+           durante a pesquisa */
+
+        categories.style.display =
+            "none";
+
+
+        studyResults.style.display =
+            "block";
+
+
+        /* Nenhum estudo */
+
+        if(filtered.length === 0){
+
+            resultsMessage.textContent =
+                "Nenhum estudo encontrado.";
+
+            studyResults.innerHTML =
+                "";
+
+            return;
+
+        }
+
+
+        resultsMessage.textContent =
+            filtered.length +
+            " estudo(s) encontrado(s).";
+
+
+        /* Mostra resultados */
+
+        studyResults.innerHTML =
+            filtered.map(study => `
+
+                <div class="study">
+
+                    <h3>
+                        ${study.title}
+                    </h3>
+
+                    <p>
+                        ${study.category}
+                    </p>
+
+                    <p>
+                        ${study.description}
+                    </p>
+
+                </div>
+
+            `).join("");
+
+    }
+);
+
+</script>
+
+</body>
+</html>
+```
