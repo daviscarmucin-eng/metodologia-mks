@@ -1,234 +1,594 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Metodologia MKS</title>
 
 <style>
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-font-family:Arial, Helvetica, sans-serif;
-background:#0d0d0d;
-color:#ffffff;
-line-height:1.6;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#0b0b0b;
+    color:#ffffff;
+    line-height:1.6;
 }
 
-header{
-background:linear-gradient(135deg,#0d0d0d,#111,#0f2b1d);
-padding:80px 20px;
-text-align:center;
-border-bottom:1px solid #1e1e1e;
+/* =========================
+   MENU
+========================= */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 5%;
+
+    background:rgba(11,11,11,0.95);
+    border-bottom:1px solid #222;
 }
 
-header h1{
-font-size:52px;
-margin-bottom:15px;
-color:#ffffff;
+.logo{
+    font-size:20px;
+    font-weight:bold;
+    letter-spacing:1px;
 }
 
-header p{
-font-size:22px;
-max-width:850px;
-margin:auto;
-color:#cfcfcf;
+.logo span{
+    color:#18b15a;
 }
 
-.buttons{
-margin-top:35px;
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
 }
 
-.buttons a{
-display:inline-block;
-margin:10px;
-padding:14px 28px;
-text-decoration:none;
-border-radius:8px;
-font-weight:bold;
-transition:0.3s;
+nav a{
+    color:#cfcfcf;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:bold;
+    transition:0.3s;
 }
 
-.btn-green{
-background:#18b15a;
-color:white;
+nav a:hover{
+    color:#18b15a;
 }
 
-.btn-green:hover{
-background:#14994d;
+/* =========================
+   ÁREAS
+========================= */
+
+.area{
+    min-height:100vh;
+    padding:100px 6%;
+    border-bottom:1px solid #1c1c1c;
 }
 
-.btn-dark{
-border:1px solid #18b15a;
-color:#18b15a;
+.area-content{
+    max-width:1200px;
+    margin:auto;
 }
 
-.btn-dark:hover{
-background:#18b15a;
-color:white;
+/* =========================
+   BIBLIOTECA
+========================= */
+
+#biblioteca{
+    background:
+    radial-gradient(circle at top right,#10351f 0%,transparent 35%),
+    #0b0b0b;
 }
 
-section{
-max-width:1150px;
-margin:auto;
-padding:70px 20px;
+.tag{
+    color:#18b15a;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:3px;
+    margin-bottom:15px;
 }
 
-.section-title{
-font-size:38px;
-margin-bottom:20px;
-color:#18b15a;
+h1{
+    font-size:60px;
+    line-height:1.1;
+    margin-bottom:20px;
 }
 
-.section-text{
-font-size:18px;
-color:#d0d0d0;
-margin-bottom:30px;
-max-width:900px;
+.intro{
+    max-width:750px;
+    color:#bdbdbd;
+    font-size:19px;
+    margin-bottom:55px;
 }
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:20px;
+/* Biblioteca em blocos */
+
+.library-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
 }
 
-.card{
-background:#171717;
-padding:28px;
-border-radius:14px;
-border:1px solid #222;
-transition:0.3s;
+.library-card{
+    min-height:210px;
+    padding:30px;
+
+    background:#141414;
+    border:1px solid #242424;
+    border-radius:12px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+
+    transition:0.3s;
+    cursor:pointer;
 }
 
-.card:hover{
-transform:translateY(-5px);
-border-color:#18b15a;
+.library-card:hover{
+    transform:translateY(-5px);
+    border-color:#18b15a;
+    background:#171717;
 }
 
-.card h3{
-margin-bottom:14px;
-font-size:24px;
-color:#ffffff;
+.number{
+    color:#18b15a;
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:auto;
 }
 
-.card p{
-color:#c8c8c8;
-font-size:16px;
+.library-card h2{
+    font-size:27px;
+    margin-bottom:8px;
 }
 
-.quote{
-background:#111;
-padding:35px;
-border-left:4px solid #18b15a;
-border-radius:10px;
-font-size:22px;
-color:#e8e8e8;
-margin-top:20px;
+.library-card p{
+    color:#999;
+    font-size:14px;
 }
+
+/* Card maior */
+
+.library-card.large{
+    grid-column:span 2;
+}
+
+/* =========================
+   CONSULTORIA
+========================= */
+
+#consultoria{
+    background:#101010;
+}
+
+.consultoria-content{
+    max-width:900px;
+}
+
+.consultoria-content h2{
+    font-size:52px;
+    margin-bottom:25px;
+}
+
+.consultoria-text{
+    color:#c5c5c5;
+    font-size:19px;
+    margin-bottom:40px;
+    max-width:700px;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin-bottom:40px;
+}
+
+.feature{
+    padding:25px;
+    border:1px solid #252525;
+    border-radius:10px;
+    background:#141414;
+}
+
+.feature h3{
+    margin-bottom:8px;
+}
+
+.feature p{
+    color:#999;
+    font-size:15px;
+}
+
+.button{
+    display:inline-block;
+    padding:14px 28px;
+    background:#18b15a;
+    color:white;
+    text-decoration:none;
+    border-radius:7px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.button:hover{
+    background:#14994d;
+}
+
+/* =========================
+   INDUSTRIES
+========================= */
+
+#industries{
+    background:
+    linear-gradient(135deg,#090909,#101612);
+}
+
+.industries-content{
+    max-width:1100px;
+}
+
+.industries-name{
+    font-size:14px;
+    letter-spacing:5px;
+    color:#18b15a;
+    margin-bottom:20px;
+}
+
+.industries-content h2{
+    font-size:70px;
+    line-height:1;
+    margin-bottom:25px;
+}
+
+.industries-description{
+    max-width:650px;
+    color:#bdbdbd;
+    font-size:19px;
+    margin-bottom:50px;
+}
+
+.industries-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.industry-card{
+    padding:35px 25px;
+    min-height:180px;
+
+    border:1px solid #292929;
+    background:#111;
+
+    border-radius:8px;
+}
+
+.industry-card span{
+    color:#18b15a;
+    font-size:12px;
+    letter-spacing:2px;
+}
+
+.industry-card h3{
+    margin-top:30px;
+    font-size:22px;
+}
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
-text-align:center;
-padding:35px 20px;
-border-top:1px solid #1f1f1f;
-color:#9e9e9e;
-font-size:15px;
-margin-top:40px;
+    padding:35px 20px;
+    text-align:center;
+
+    color:#777;
+    font-size:13px;
+
+    border-top:1px solid #202020;
 }
 
-@media(max-width:768px){
+/* =========================
+   MOBILE
+========================= */
 
-header h1{
-font-size:38px;
+@media(max-width:800px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        gap:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .area{
+        padding:80px 20px;
+    }
+
+    h1{
+        font-size:42px;
+    }
+
+    .library-grid{
+        grid-template-columns:1fr;
+    }
+
+    .library-card.large{
+        grid-column:span 1;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .industries-grid{
+        grid-template-columns:1fr;
+    }
+
+    .industries-content h2{
+        font-size:48px;
+    }
+
 }
 
-header p{
-font-size:18px;
-}
-
-.section-title{
-font-size:30px;
-}
-
-.quote{
-font-size:19px;
-}
-
-}
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>Metodologia MKS</h1>
-<p>Hipertrofia baseada em evidência para quem busca evolução real.</p>
+<!-- =========================
+     MENU PRINCIPAL
+========================= -->
 
-<div class="buttons">
-<a href="#" class="btn-green">Biblioteca Científica</a>
-<a href="#" class="btn-dark">Consultoria MKS</a>
-</div>
-</header>
+<nav>
 
-<section>
-<h2 class="section-title">Biblioteca Científica MKS</h2>
-<p class="section-text">
-Estudos explicados com aplicação prática, interpretação crítica e direcionamento real para hipertrofia.
-</p>
+    <div class="logo">
+        METODOLOGIA <span>MKS</span>
+    </div>
 
-<div class="grid">
-<div class="card">
-<h3>Volume de Treino</h3>
-<p>Quantas séries realmente importam para crescer.</p>
-</div>
+    <ul>
+        <li><a href="#biblioteca">Biblioteca</a></li>
+        <li><a href="#consultoria">Consultoria</a></li>
+        <li><a href="#industries">Industries</a></li>
+    </ul>
 
-<div class="card">
-<h3>Falha Muscular</h3>
-<p>Quando utilizar e quando evitar.</p>
-</div>
+</nav>
 
-<div class="card">
-<h3>Deload</h3>
-<p>Necessidade real ou exagero comum?</p>
-</div>
 
-<div class="card">
-<h3>Frequência</h3>
-<p>Treinar 1x, 2x ou mais por semana?</p>
-</div>
-</div>
+<!-- =========================
+     BIBLIOTECA CIENTÍFICA
+========================= -->
+
+<section class="area" id="biblioteca">
+
+    <div class="area-content">
+
+        <div class="tag">
+            01 / BIBLIOTECA CIENTÍFICA
+        </div>
+
+        <h1>
+            Conhecimento<br>
+            organizado.
+        </h1>
+
+        <p class="intro">
+            Estudos, conceitos e análises sobre hipertrofia,
+            treinamento e desenvolvimento físico, organizados
+            por temas para facilitar a compreensão e aplicação prática.
+        </p>
+
+
+        <div class="library-grid">
+
+            <div class="library-card large">
+                <div class="number">01</div>
+                <h2>Volume de Treino</h2>
+                <p>
+                    Séries, dose-resposta e relação entre volume e hipertrofia.
+                </p>
+            </div>
+
+
+            <div class="library-card">
+                <div class="number">02</div>
+                <h2>Frequência</h2>
+                <p>
+                    Distribuição dos estímulos ao longo da semana.
+                </p>
+            </div>
+
+
+            <div class="library-card">
+                <div class="number">03</div>
+                <h2>Recuperação</h2>
+                <p>
+                    Fadiga, descanso e adaptação ao treinamento.
+                </p>
+            </div>
+
+
+            <div class="library-card">
+                <div class="number">04</div>
+                <h2>Falha Muscular</h2>
+                <p>
+                    Intensidade, proximidade da falha e aplicação prática.
+                </p>
+            </div>
+
+
+            <div class="library-card">
+                <div class="number">05</div>
+                <h2>Progressão</h2>
+                <p>
+                    Estratégias para continuar evoluindo ao longo do tempo.
+                </p>
+            </div>
+
+
+            <div class="library-card">
+                <div class="number">06</div>
+                <h2>Seleção de Exercícios</h2>
+                <p>
+                    Biomecânica, execução e escolha dos movimentos.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
 
-<section>
-<h2 class="section-title">Consultoria MKS</h2>
-<p class="section-text">
-Treinamento personalizado baseado em evidência, individualidade biológica e progresso contínuo.
-</p>
+
+<!-- =========================
+     CONSULTORIA
+========================= -->
+
+<section class="area" id="consultoria">
+
+    <div class="area-content consultoria-content">
+
+        <div class="tag">
+            02 / CONSULTORIA
+        </div>
+
+        <h2>
+            Treinamento<br>
+            individualizado.
+        </h2>
+
+        <p class="consultoria-text">
+            Uma abordagem baseada em evidências, individualidade
+            e acompanhamento contínuo para construir um treinamento
+            direcionado ao seu objetivo.
+        </p>
+
+
+        <div class="features">
+
+            <div class="feature">
+                <h3>Individualização</h3>
+                <p>
+                    O treinamento é construído de acordo com
+                    as características e necessidades de cada pessoa.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>Progressão</h3>
+                <p>
+                    A evolução é acompanhada e utilizada para
+                    orientar os próximos passos.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>Monitoramento</h3>
+                <p>
+                    Análise contínua para identificar o que está
+                    funcionando e o que precisa ser ajustado.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>Estratégia</h3>
+                <p>
+                    Decisões de treinamento baseadas em princípios
+                    científicos e aplicação prática.
+                </p>
+            </div>
+
+        </div>
+
+
+        <a href="#" class="button">
+            Conhecer a consultoria
+        </a>
+
+    </div>
+
 </section>
 
-<section>
-<h2 class="section-title">Mentalidade de Evolução</h2>
 
-<div class="quote">
-Consistência vence impulso. Método vence ego. Evolução exige tempo, inteligência e disciplina.
-</div>
+<!-- =========================
+     MIKADESH INDUSTRIES
+========================= -->
+
+<section class="area" id="industries">
+
+    <div class="area-content industries-content">
+
+        <div class="industries-name">
+            MIKADESH INDUSTRIES
+        </div>
+
+        <h2>
+            ENGINEERED<br>
+            FOR TRAINING.
+        </h2>
+
+        <p class="industries-description">
+            Desenvolvimento de equipamentos e soluções para
+            treinamento de força, unindo engenharia, biomecânica
+            e experiência prática.
+        </p>
+
+
+        <div class="industries-grid">
+
+            <div class="industry-card">
+                <span>01</span>
+                <h3>Equipamentos</h3>
+            </div>
+
+            <div class="industry-card">
+                <span>02</span>
+                <h3>Projetos</h3>
+            </div>
+
+            <div class="industry-card">
+                <span>03</span>
+                <h3>Desenvolvimento</h3>
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
 
-<section>
-<h2 class="section-title">Sobre</h2>
-<p class="section-text">
-A Metodologia MKS nasce da busca contínua por evolução física e intelectual dentro da hipertrofia. 
-Estudo constante, aplicação prática e foco em resultados reais formam a base deste projeto.
-</p>
-</section>
 
 <footer>
-© 2026 Metodologia MKS • Evolução baseada em evidência
+
+    © 2026 Metodologia MKS • MIKADESH Industries
+
 </footer>
 
 </body>
 </html>
+```
