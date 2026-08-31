@@ -15,33 +15,20 @@
     box-sizing:border-box;
 }
 
-html{
-    scroll-behavior:smooth;
-}
-
 body{
     font-family:Arial, Helvetica, sans-serif;
     background:#0b0b0b;
-    color:#ffffff;
-    line-height:1.6;
+    color:#fff;
 }
 
-/* =========================
-   MENU
-========================= */
-
 nav{
-    position:sticky;
-    top:0;
-    z-index:1000;
-
     display:flex;
     justify-content:space-between;
     align-items:center;
 
-    padding:18px 5%;
+    padding:18px 6%;
 
-    background:rgba(11,11,11,0.95);
+    background:#0b0b0b;
     border-bottom:1px solid #222;
 }
 
@@ -57,45 +44,39 @@ nav{
 
 nav ul{
     display:flex;
-    list-style:none;
     gap:30px;
+    list-style:none;
 }
 
 nav a{
-    color:#cfcfcf;
+    color:#ccc;
     text-decoration:none;
     font-size:14px;
     font-weight:bold;
-    transition:0.3s;
+    transition:.3s;
 }
 
 nav a:hover{
     color:#18b15a;
 }
 
-/* =========================
-   ÁREAS
-========================= */
+.hero{
+    min-height:calc(100vh - 70px);
 
-.area{
-    min-height:100vh;
-    padding:100px 6%;
-    border-bottom:1px solid #1c1c1c;
-}
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-.area-content{
-    max-width:1200px;
-    margin:auto;
-}
+    text-align:center;
+    padding:40px 20px;
 
-/* =========================
-   BIBLIOTECA
-========================= */
-
-#biblioteca{
     background:
     radial-gradient(circle at top right,#10351f 0%,transparent 35%),
     #0b0b0b;
+}
+
+.hero-content{
+    max-width:850px;
 }
 
 .tag{
@@ -103,214 +84,75 @@ nav a:hover{
     font-size:13px;
     font-weight:bold;
     letter-spacing:3px;
-    margin-bottom:15px;
-}
-
-h1{
-    font-size:60px;
-    line-height:1.1;
     margin-bottom:20px;
 }
 
-.intro{
-    max-width:750px;
-    color:#bdbdbd;
-    font-size:19px;
-    margin-bottom:55px;
+h1{
+    font-size:64px;
+    line-height:1.05;
+    margin-bottom:25px;
 }
 
-/* Biblioteca em blocos */
+.hero p{
+    color:#aaa;
+    font-size:19px;
+    margin-bottom:45px;
+}
 
-.library-grid{
+.areas{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:15px;
 }
 
-.library-card{
-    min-height:210px;
-    padding:30px;
+.area{
+    display:block;
+    text-decoration:none;
+    color:#fff;
+
+    padding:35px 25px;
+    min-height:190px;
 
     background:#141414;
     border:1px solid #242424;
     border-radius:12px;
 
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-end;
+    text-align:left;
 
-    transition:0.3s;
-    cursor:pointer;
+    transition:.3s;
 }
 
-.library-card:hover{
-    transform:translateY(-5px);
+.area:hover{
+    transform:translateY(-6px);
     border-color:#18b15a;
     background:#171717;
 }
 
-.number{
+.area-number{
     color:#18b15a;
     font-size:13px;
     font-weight:bold;
-    margin-bottom:auto;
 }
 
-.library-card h2{
-    font-size:27px;
+.area h2{
+    margin-top:50px;
     margin-bottom:8px;
+    font-size:23px;
 }
 
-.library-card p{
-    color:#999;
+.area p{
+    margin:0;
     font-size:14px;
+    color:#888;
 }
-
-/* Card maior */
-
-.library-card.large{
-    grid-column:span 2;
-}
-
-/* =========================
-   CONSULTORIA
-========================= */
-
-#consultoria{
-    background:#101010;
-}
-
-.consultoria-content{
-    max-width:900px;
-}
-
-.consultoria-content h2{
-    font-size:52px;
-    margin-bottom:25px;
-}
-
-.consultoria-text{
-    color:#c5c5c5;
-    font-size:19px;
-    margin-bottom:40px;
-    max-width:700px;
-}
-
-.features{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:15px;
-    margin-bottom:40px;
-}
-
-.feature{
-    padding:25px;
-    border:1px solid #252525;
-    border-radius:10px;
-    background:#141414;
-}
-
-.feature h3{
-    margin-bottom:8px;
-}
-
-.feature p{
-    color:#999;
-    font-size:15px;
-}
-
-.button{
-    display:inline-block;
-    padding:14px 28px;
-    background:#18b15a;
-    color:white;
-    text-decoration:none;
-    border-radius:7px;
-    font-weight:bold;
-    transition:0.3s;
-}
-
-.button:hover{
-    background:#14994d;
-}
-
-/* =========================
-   INDUSTRIES
-========================= */
-
-#industries{
-    background:
-    linear-gradient(135deg,#090909,#101612);
-}
-
-.industries-content{
-    max-width:1100px;
-}
-
-.industries-name{
-    font-size:14px;
-    letter-spacing:5px;
-    color:#18b15a;
-    margin-bottom:20px;
-}
-
-.industries-content h2{
-    font-size:70px;
-    line-height:1;
-    margin-bottom:25px;
-}
-
-.industries-description{
-    max-width:650px;
-    color:#bdbdbd;
-    font-size:19px;
-    margin-bottom:50px;
-}
-
-.industries-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:15px;
-}
-
-.industry-card{
-    padding:35px 25px;
-    min-height:180px;
-
-    border:1px solid #292929;
-    background:#111;
-
-    border-radius:8px;
-}
-
-.industry-card span{
-    color:#18b15a;
-    font-size:12px;
-    letter-spacing:2px;
-}
-
-.industry-card h3{
-    margin-top:30px;
-    font-size:22px;
-}
-
-/* =========================
-   FOOTER
-========================= */
 
 footer{
-    padding:35px 20px;
     text-align:center;
-
+    padding:30px;
+    border-top:1px solid #222;
     color:#777;
     font-size:13px;
-
-    border-top:1px solid #202020;
 }
-
-/* =========================
-   MOBILE
-========================= */
 
 @media(max-width:800px){
 
@@ -321,36 +163,14 @@ footer{
 
     nav ul{
         gap:15px;
-        flex-wrap:wrap;
-        justify-content:center;
-    }
-
-    .area{
-        padding:80px 20px;
     }
 
     h1{
-        font-size:42px;
+        font-size:43px;
     }
 
-    .library-grid{
+    .areas{
         grid-template-columns:1fr;
-    }
-
-    .library-card.large{
-        grid-column:span 1;
-    }
-
-    .features{
-        grid-template-columns:1fr;
-    }
-
-    .industries-grid{
-        grid-template-columns:1fr;
-    }
-
-    .industries-content h2{
-        font-size:48px;
     }
 
 }
@@ -360,10 +180,6 @@ footer{
 
 <body>
 
-<!-- =========================
-     MENU PRINCIPAL
-========================= -->
-
 <nav>
 
     <div class="logo">
@@ -371,216 +187,80 @@ footer{
     </div>
 
     <ul>
-        <li><a href="#biblioteca">Biblioteca</a></li>
-        <li><a href="#consultoria">Consultoria</a></li>
-        <li><a href="#industries">Industries</a></li>
+        <li><a href="biblioteca.html">Biblioteca</a></li>
+        <li><a href="consultoria.html">Consultoria</a></li>
+        <li><a href="industries.html">Industries</a></li>
     </ul>
 
 </nav>
 
 
-<!-- =========================
-     BIBLIOTECA CIENTÍFICA
-========================= -->
+<main class="hero">
 
-<section class="area" id="biblioteca">
-
-    <div class="area-content">
+    <div class="hero-content">
 
         <div class="tag">
-            01 / BIBLIOTECA CIENTÍFICA
+            CIÊNCIA • TREINAMENTO • ENGENHARIA
         </div>
 
         <h1>
-            Conhecimento<br>
-            organizado.
+            Metodologia MKS
         </h1>
 
-        <p class="intro">
-            Estudos, conceitos e análises sobre hipertrofia,
-            treinamento e desenvolvimento físico, organizados
-            por temas para facilitar a compreensão e aplicação prática.
+        <p>
+            Conhecimento, treinamento e desenvolvimento
+            aplicados à evolução física.
         </p>
 
 
-        <div class="library-grid">
+        <div class="areas">
 
-            <div class="library-card large">
-                <div class="number">01</div>
-                <h2>Volume de Treino</h2>
+            <a href="biblioteca.html" class="area">
+
+                <div class="area-number">01</div>
+
+                <h2>Biblioteca Científica</h2>
+
                 <p>
-                    Séries, dose-resposta e relação entre volume e hipertrofia.
+                    Estudos e conhecimento organizado
+                    sobre treinamento e hipertrofia.
                 </p>
-            </div>
+
+            </a>
 
 
-            <div class="library-card">
-                <div class="number">02</div>
-                <h2>Frequência</h2>
+            <a href="consultoria.html" class="area">
+
+                <div class="area-number">02</div>
+
+                <h2>Consultoria</h2>
+
                 <p>
-                    Distribuição dos estímulos ao longo da semana.
+                    Treinamento individualizado baseado
+                    em evidências.
                 </p>
-            </div>
+
+            </a>
 
 
-            <div class="library-card">
-                <div class="number">03</div>
-                <h2>Recuperação</h2>
+            <a href="industries.html" class="area">
+
+                <div class="area-number">03</div>
+
+                <h2>MIKADESH Industries</h2>
+
                 <p>
-                    Fadiga, descanso e adaptação ao treinamento.
+                    Desenvolvimento de equipamentos
+                    para treinamento de força.
                 </p>
-            </div>
 
-
-            <div class="library-card">
-                <div class="number">04</div>
-                <h2>Falha Muscular</h2>
-                <p>
-                    Intensidade, proximidade da falha e aplicação prática.
-                </p>
-            </div>
-
-
-            <div class="library-card">
-                <div class="number">05</div>
-                <h2>Progressão</h2>
-                <p>
-                    Estratégias para continuar evoluindo ao longo do tempo.
-                </p>
-            </div>
-
-
-            <div class="library-card">
-                <div class="number">06</div>
-                <h2>Seleção de Exercícios</h2>
-                <p>
-                    Biomecânica, execução e escolha dos movimentos.
-                </p>
-            </div>
+            </a>
 
         </div>
 
     </div>
 
-</section>
-
-
-<!-- =========================
-     CONSULTORIA
-========================= -->
-
-<section class="area" id="consultoria">
-
-    <div class="area-content consultoria-content">
-
-        <div class="tag">
-            02 / CONSULTORIA
-        </div>
-
-        <h2>
-            Treinamento<br>
-            individualizado.
-        </h2>
-
-        <p class="consultoria-text">
-            Uma abordagem baseada em evidências, individualidade
-            e acompanhamento contínuo para construir um treinamento
-            direcionado ao seu objetivo.
-        </p>
-
-
-        <div class="features">
-
-            <div class="feature">
-                <h3>Individualização</h3>
-                <p>
-                    O treinamento é construído de acordo com
-                    as características e necessidades de cada pessoa.
-                </p>
-            </div>
-
-            <div class="feature">
-                <h3>Progressão</h3>
-                <p>
-                    A evolução é acompanhada e utilizada para
-                    orientar os próximos passos.
-                </p>
-            </div>
-
-            <div class="feature">
-                <h3>Monitoramento</h3>
-                <p>
-                    Análise contínua para identificar o que está
-                    funcionando e o que precisa ser ajustado.
-                </p>
-            </div>
-
-            <div class="feature">
-                <h3>Estratégia</h3>
-                <p>
-                    Decisões de treinamento baseadas em princípios
-                    científicos e aplicação prática.
-                </p>
-            </div>
-
-        </div>
-
-
-        <a href="#" class="button">
-            Conhecer a consultoria
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     MIKADESH INDUSTRIES
-========================= -->
-
-<section class="area" id="industries">
-
-    <div class="area-content industries-content">
-
-        <div class="industries-name">
-            MIKADESH INDUSTRIES
-        </div>
-
-        <h2>
-            ENGINEERED<br>
-            FOR TRAINING.
-        </h2>
-
-        <p class="industries-description">
-            Desenvolvimento de equipamentos e soluções para
-            treinamento de força, unindo engenharia, biomecânica
-            e experiência prática.
-        </p>
-
-
-        <div class="industries-grid">
-
-            <div class="industry-card">
-                <span>01</span>
-                <h3>Equipamentos</h3>
-            </div>
-
-            <div class="industry-card">
-                <span>02</span>
-                <h3>Projetos</h3>
-            </div>
-
-            <div class="industry-card">
-                <span>03</span>
-                <h3>Desenvolvimento</h3>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
+</main>
 
 
 <footer>
