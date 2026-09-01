@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
+
+<title>Volume de Treino — Biblioteca Científica</title>
+
+
+<style>
+
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#0b0b0b;
+    color:#fff;
+}
+
+
+/* =========================
+   NAVEGAÇÃO
+========================= */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 6%;
+
+    background:#0b0b0b;
+    border-bottom:1px solid #222;
+}
+
+.logo{
+    font-size:20px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#18b15a;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav a{
+    color:#ccc;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#18b15a;
+}
+
+
+/* =========================
+   CONTEÚDO PRINCIPAL
+========================= */
+
+main{
+    max-width:1200px;
+    margin:auto;
+    padding:90px 20px;
+}
+
+
+.tag{
+    color:#18b15a;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:3px;
+    margin-bottom:15px;
+}
+
+
+.back{
+    display:inline-block;
+
+    margin-bottom:35px;
+
+    color:#888;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    transition:.3s;
+}
+
+.back:hover{
+    color:#18b15a;
+}
+
+
+h1{
+    font-size:58px;
+    margin-bottom:20px;
+}
+
+
+.intro{
+    color:#aaa;
+    font-size:18px;
+    max-width:750px;
+    margin-bottom:60px;
+}
+
+
+/* =========================
+   ESTUDOS
+========================= */
+
+.section-title{
+
+    font-size:14px;
+
+    color:#18b15a;
+
+    letter-spacing:2px;
+
+    margin-bottom:20px;
+}
+
+
+.study-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:15px;
+}
+
+
+.study-card{
+
+    min-height:300px;
+
+    padding:30px;
+
+    background:#141414;
+
+    border:1px solid #242424;
+
+    border-radius:12px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    transition:.3s;
+}
+
+
+.study-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#18b15a;
+
+    background:#171717;
+}
+
+
+.number{
+
+    color:#18b15a;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    margin-bottom:auto;
+}
+
+
+.study-card h2{
+
+    font-size:26px;
+
+    line-height:1.15;
+
+    margin-bottom:14px;
+}
+
+
+.study-type{
+
+    color:#18b15a;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    margin-bottom:14px;
+}
+
+
+.study-card p{
+
+    color:#999;
+
+    font-size:14px;
+
+    line-height:1.6;
+
+    margin-bottom:25px;
+}
+
+
+.study-link{
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+    transition:.3s;
+}
+
+
+.study-link:hover{
+
+    color:#18b15a;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer{
+
+    text-align:center;
+
+    padding:30px;
+
+    border-top:1px solid #222;
+
+    color:#777;
+
+    font-size:13px;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media(max-width:800px){
+
+    nav{
+
+        flex-direction:column;
+
+        gap:15px;
+    }
+
+
+    nav ul{
+
+        gap:15px;
+    }
+
+
+    h1{
+
+        font-size:42px;
+    }
+
+
+    .study-grid{
+
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVEGAÇÃO
+========================= -->
+
+<nav>
+
+    <div class="logo">
+
+        METODOLOGIA
+        <span>MKS</span>
+
+    </div>
+
+
+    <ul>
+
+        <li>
+
+            <a href="biblioteca.html">
+                Biblioteca
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="consultoria.html">
+                Consultoria
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="industries.html">
+                Industries
+            </a>
+
+        </li>
+
+    </ul>
+
+</nav>
+
+
+
+<!-- =========================
+     CONTEÚDO
+========================= -->
+
+<main>
+
+
+    <div class="tag">
+
+        01 / BIBLIOTECA CIENTÍFICA
+
+    </div>
+
+
+    <a
+    href="biblioteca.html"
+    class="back"
+    >
+
+        ← Voltar para a Biblioteca
+
+    </a>
+
+
+    <h1>
+
+        Volume de Treino
+
+    </h1>
+
+
+    <p class="intro">
+
+        Estudos e análises sobre séries,
+        relação dose-resposta e hipertrofia muscular.
+
+    </p>
+
+
+
+    <!-- =========================
+         ESTUDOS
+    ========================= -->
+
+    <div class="section-title">
+
+        ESTUDOS DISPONÍVEIS
+
+    </div>
+
+
+
+    <div class="study-grid">
+
+
+        <!-- ESTUDO 01 -->
+
+        <div class="study-card">
+
+
+            <div class="number">
+
+                01
+
+            </div>
+
+
+            <h2>
+
+                Mais séries geram mais hipertrofia?
+
+            </h2>
+
+
+            <div class="study-type">
+
+                META-ANÁLISE • 2017
+
+            </div>
+
+
+            <p>
+
+                O aumento do volume semanal
+                realmente produz maiores ganhos musculares?
+
+            </p>
+
+
+            <a
+            href="estudo-volume-01.html"
+            class="study-link"
+            >
+
+                → Ler análise
+
+            </a>
+
+
+        </div>
+
+
+
+        <!-- ESTUDO 02 -->
+
+        <div class="study-card">
+
+
+            <div class="number">
+
+                02
+
+            </div>
+
+
+            <h2>
+
+                Mais volume tem um limite?
+
+            </h2>
+
+
+            <div class="study-type">
+
+                META-ANÁLISE / META-REGRESSÃO • 2026
+
+            </div>
+
+
+            <p>
+
+                Em que ponto adicionar séries
+                começa a produzir retornos menores?
+
+            </p>
+
+
+            <a
+            href="estudo-volume-02.html"
+            class="study-link"
+            >
+
+                → Ler análise
+
+            </a>
+
+
+        </div>
+
+
+
+        <!-- ESTUDO 03 -->
+
+        <div class="study-card">
+
+
+            <div class="number">
+
+                03
+
+            </div>
+
+
+            <h2>
+
+                12, 20 ou mais de 20 séries?
+
+            </h2>
+
+
+            <div class="study-type">
+
+                REVISÃO SISTEMÁTICA • 2022
+
+            </div>
+
+
+            <p>
+
+                Existe uma faixa de séries semanais
+                que parece oferecer bons resultados
+                para hipertrofia?
+
+            </p>
+
+
+            <a
+            href="estudo-volume-03.html"
+            class="study-link"
+            >
+
+                → Ler análise
+
+            </a>
+
+
+        </div>
+
+
+
+        <!-- ESTUDO 04 -->
+
+        <div class="study-card">
+
+
+            <div class="number">
+
+                04
+
+            </div>
+
+
+            <h2>
+
+                O que realmente conta como volume?
+
+            </h2>
+
+
+            <div class="study-type">
+
+                REVISÃO SISTEMÁTICA • 2021
+
+            </div>
+
+
+            <p>
+
+                Quando falamos em séries por músculo,
+                afinal, o que realmente estamos contando?
+
+            </p>
+
+
+            <a
+            href="estudo-volume-04.html"
+            class="study-link"
+            >
+
+                → Ler análise
+
+            </a>
+
+
+        </div>
+
+
+
+        <!-- ESTUDO 05 -->
+
+        <div class="study-card">
+
+
+            <div class="number">
+
+                05
+
+            </div>
+
+
+            <h2>
+
+                16, 24 ou 32 séries?
+
+            </h2>
+
+
+            <div class="study-type">
+
+                ENSAIO CLÍNICO • 2022
+
+            </div>
+
+
+            <p>
+
+                Em praticantes treinados,
+                volumes muito altos realmente
+                produzem mais hipertrofia?
+
+            </p>
+
+
+            <a
+            href="estudo-volume-05.html"
+            class="study-link"
+            >
+
+                → Ler análise
+
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+
+</main>
+
+
+
+<!-- =========================
+     RODAPÉ
+========================= -->
+
+<footer>
+
+    © 2026 Metodologia MKS
+
+</footer>
+
+
+</body>
+
+</html>
