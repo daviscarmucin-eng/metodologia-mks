@@ -1,0 +1,1414 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+Mais Séries Geram Mais Hipertrofia? — Biblioteca Científica
+</title>
+
+
+<style>
+
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#0b0b0b;
+    color:#fff;
+    line-height:1.7;
+}
+
+
+/* =========================
+   NAVEGAÇÃO
+========================= */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 6%;
+
+    background:#0b0b0b;
+    border-bottom:1px solid #222;
+}
+
+.logo{
+    font-size:20px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#18b15a;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav a{
+    color:#ccc;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#18b15a;
+}
+
+
+/* =========================
+   CONTEÚDO PRINCIPAL
+========================= */
+
+main{
+    max-width:1000px;
+    margin:auto;
+    padding:80px 20px 100px;
+}
+
+
+.tag{
+    color:#18b15a;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:3px;
+    margin-bottom:15px;
+}
+
+
+.back{
+    display:inline-block;
+    margin-bottom:35px;
+
+    color:#888;
+    text-decoration:none;
+
+    font-size:14px;
+
+    transition:.3s;
+}
+
+.back:hover{
+    color:#18b15a;
+}
+
+
+h1{
+    font-size:54px;
+    line-height:1.1;
+    max-width:850px;
+    margin-bottom:20px;
+}
+
+
+.subtitle{
+    color:#aaa;
+    font-size:18px;
+    max-width:760px;
+    margin-bottom:25px;
+}
+
+
+.study-type{
+    color:#18b15a;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:1px;
+
+    margin-bottom:55px;
+}
+
+
+/* =========================
+   SEÇÕES
+========================= */
+
+.section{
+    margin-bottom:65px;
+}
+
+
+.section-label{
+    color:#18b15a;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:2px;
+
+    margin-bottom:12px;
+}
+
+
+.section h2{
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+
+.section p{
+    color:#b5b5b5;
+    font-size:17px;
+    margin-bottom:18px;
+}
+
+
+/* =========================
+   RESUMO RÁPIDO
+========================= */
+
+.quick-answer{
+    background:#141414;
+
+    border:1px solid #242424;
+
+    border-left:3px solid #18b15a;
+
+    border-radius:10px;
+
+    padding:28px;
+
+    margin-bottom:65px;
+}
+
+.quick-answer h2{
+    font-size:23px;
+    margin-bottom:12px;
+}
+
+.quick-answer p{
+    color:#d0d0d0;
+    font-size:17px;
+}
+
+
+/* =========================
+   FICHA TÉCNICA
+========================= */
+
+.study-info{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:12px;
+
+    margin-top:25px;
+}
+
+
+.info-box{
+
+    background:#141414;
+
+    border:1px solid #242424;
+
+    border-radius:10px;
+
+    padding:20px;
+}
+
+
+.info-label{
+
+    color:#18b15a;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+    margin-bottom:7px;
+}
+
+
+.info-value{
+
+    color:#d0d0d0;
+
+    font-size:15px;
+}
+
+
+/* =========================
+   LISTAS
+========================= */
+
+.analysis-list{
+
+    margin-top:20px;
+
+    padding-left:20px;
+}
+
+
+.analysis-list li{
+
+    color:#b5b5b5;
+
+    font-size:17px;
+
+    margin-bottom:12px;
+}
+
+
+/* =========================
+   DESTAQUE
+========================= */
+
+.highlight{
+
+    background:#141414;
+
+    border:1px solid #242424;
+
+    border-radius:10px;
+
+    padding:28px;
+
+    margin-top:25px;
+}
+
+
+.highlight strong{
+
+    color:#18b15a;
+}
+
+
+/* =========================
+   NÃO SIGNIFICA
+========================= */
+
+.not-mean{
+
+    border-left:3px solid #555;
+
+    padding-left:22px;
+}
+
+
+/* =========================
+   PONDERAÇÃO
+========================= */
+
+.analysis{
+
+    background:#111;
+
+    border:1px solid #242424;
+
+    border-radius:12px;
+
+    padding:32px;
+}
+
+
+.analysis h2{
+
+    margin-bottom:18px;
+}
+
+
+/* =========================
+   CONCLUSÃO
+========================= */
+
+.conclusion{
+
+    background:#141414;
+
+    border:1px solid #18b15a;
+
+    border-radius:12px;
+
+    padding:32px;
+}
+
+
+.conclusion h2{
+
+    margin-bottom:18px;
+}
+
+
+/* =========================
+   FONTE
+========================= */
+
+.source{
+
+    background:#141414;
+
+    border:1px solid #242424;
+
+    border-radius:12px;
+
+    padding:28px;
+}
+
+
+.source p{
+
+    font-size:15px;
+
+    color:#aaa;
+
+    margin-bottom:15px;
+}
+
+
+.source a{
+
+    display:inline-block;
+
+    color:#18b15a;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:bold;
+}
+
+
+.source a:hover{
+
+    color:#fff;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer{
+
+    text-align:center;
+
+    padding:30px;
+
+    border-top:1px solid #222;
+
+    color:#777;
+
+    font-size:13px;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media(max-width:800px){
+
+    nav{
+
+        flex-direction:column;
+
+        gap:15px;
+    }
+
+
+    nav ul{
+
+        gap:15px;
+    }
+
+
+    main{
+
+        padding-top:60px;
+    }
+
+
+    h1{
+
+        font-size:40px;
+    }
+
+
+    .section h2{
+
+        font-size:26px;
+    }
+
+
+    .study-info{
+
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVEGAÇÃO
+========================= -->
+
+<nav>
+
+    <div class="logo">
+
+        METODOLOGIA
+        <span>MKS</span>
+
+    </div>
+
+
+    <ul>
+
+        <li>
+            <a href="biblioteca.html">
+                Biblioteca
+            </a>
+        </li>
+
+
+        <li>
+            <a href="consultoria.html">
+                Consultoria
+            </a>
+        </li>
+
+
+        <li>
+            <a href="industries.html">
+                Industries
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+
+<!-- =========================
+     CONTEÚDO PRINCIPAL
+========================= -->
+
+<main>
+
+
+    <div class="tag">
+
+        01 / VOLUME DE TREINO
+
+    </div>
+
+
+    <a
+    href="volume.html"
+    class="back"
+    >
+
+        ← Voltar para Volume de Treino
+
+    </a>
+
+
+
+    <!-- =========================
+         TÍTULO
+    ========================= -->
+
+    <h1>
+
+        Mais séries geram mais hipertrofia?
+
+    </h1>
+
+
+    <p class="subtitle">
+
+        Uma análise sobre a relação entre
+        o volume semanal de treinamento
+        e os ganhos de massa muscular.
+
+    </p>
+
+
+    <div class="study-type">
+
+        REVISÃO SISTEMÁTICA E META-ANÁLISE • 2017
+
+    </div>
+
+
+
+    <!-- =========================
+         PERGUNTA
+    ========================= -->
+
+    <section class="section">
+
+        <div class="section-label">
+
+            PERGUNTA INVESTIGADA
+
+        </div>
+
+
+        <h2>
+
+            O aumento do número de séries
+            semanais pode gerar mais hipertrofia?
+
+        </h2>
+
+
+        <p>
+
+            O objetivo desta revisão sistemática
+            com meta-análise foi investigar a relação
+            entre o volume semanal de treinamento
+            resistido e os ganhos de massa muscular.
+
+        </p>
+
+
+        <p>
+
+            De forma simples, os pesquisadores
+            buscaram responder se realizar mais
+            séries ao longo da semana estaria
+            associado a maiores ganhos de hipertrofia.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         RESPOSTA RÁPIDA
+    ========================= -->
+
+    <div class="quick-answer">
+
+        <h2>
+
+            Resposta rápida
+
+        </h2>
+
+
+        <p>
+
+            Os dados analisados indicaram uma
+            relação dose-resposta positiva entre
+            o volume semanal de treinamento
+            e os ganhos de massa muscular.
+
+        </p>
+
+
+        <p>
+
+            Em termos gerais, dentro dos estudos
+            incluídos, maiores volumes estiveram
+            associados a maiores ganhos de
+            hipertrofia.
+
+        </p>
+
+    </div>
+
+
+
+    <!-- =========================
+         FICHA TÉCNICA
+    ========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            SOBRE O ESTUDO
+
+        </div>
+
+
+        <h2>
+
+            Ficha técnica
+
+        </h2>
+
+
+        <div class="study-info">
+
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    AUTORES
+
+                </div>
+
+                <div class="info-value">
+
+                    Brad J. Schoenfeld,
+                    Dan Ogborn e
+                    James W. Krieger
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    ANO
+
+                </div>
+
+                <div class="info-value">
+
+                    2017
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    TIPO DE ESTUDO
+
+                </div>
+
+                <div class="info-value">
+
+                    Revisão sistemática
+                    e meta-análise
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    ESTUDOS ANALISADOS
+
+                </div>
+
+                <div class="info-value">
+
+                    15 estudos
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    GRUPOS ANALISADOS
+
+                </div>
+
+                <div class="info-value">
+
+                    34 grupos de tratamento
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    PUBLICAÇÃO
+
+                </div>
+
+                <div class="info-value">
+
+                    Journal of Sports Sciences
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         COMO FOI REALIZADO
+    ========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            METODOLOGIA
+
+        </div>
+
+
+        <h2>
+
+            Como a análise foi realizada?
+
+        </h2>
+
+
+        <p>
+
+            Em vez de testar diretamente um único
+            grupo de pessoas, os autores reuniram
+            resultados de diversos estudos que
+            investigaram o treinamento resistido
+            e alterações relacionadas à massa muscular.
+
+        </p>
+
+
+        <p>
+
+            O objetivo foi analisar se existia uma
+            relação entre o número de séries realizadas
+            semanalmente e os ganhos de tamanho muscular.
+
+        </p>
+
+
+        <p>
+
+            Para isso, os pesquisadores utilizaram
+            análises estatísticas capazes de investigar
+            uma possível relação dose-resposta entre
+            volume e hipertrofia.
+
+        </p>
+
+
+        <div class="highlight">
+
+            <p>
+
+                <strong>Em termos simples:</strong>
+
+                em vez de perguntar apenas se
+                "mais ou menos séries" funcionavam,
+                os autores buscaram observar como
+                alterações no volume semanal se
+                relacionavam com os ganhos musculares.
+
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         RESULTADOS
+    ========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            RESULTADOS
+
+        </div>
+
+
+        <h2>
+
+            O que foi encontrado?
+
+        </h2>
+
+
+        <p>
+
+            A análise encontrou uma relação
+            positiva entre o volume semanal
+            de treinamento e as mudanças
+            observadas no tamanho muscular.
+
+        </p>
+
+
+        <p>
+
+            Quando o número de séries semanais
+            foi analisado como uma variável contínua,
+            o efeito do volume sobre as mudanças
+            no tamanho muscular foi estatisticamente
+            significativo.
+
+        </p>
+
+
+        <p>
+
+            De forma geral, os resultados apontaram
+            para uma relação gradual: conforme o
+            volume semanal aumentava, os ganhos de
+            hipertrofia também tendiam a aumentar.
+
+        </p>
+
+
+        <div class="highlight">
+
+            <p>
+
+                <strong>Principal achado:</strong>
+
+                os resultados da meta-análise
+                indicaram que o aumento do volume
+                de treinamento esteve associado
+                a maiores ganhos de hipertrofia.
+
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         APLICAÇÃO PRÁTICA
+    ========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            APLICAÇÃO PRÁTICA
+
+        </div>
+
+
+        <h2>
+
+            O que isso pode significar para o treino?
+
+        </h2>
+
+
+        <p>
+
+            O estudo reforça que o número de séries
+            realizadas é uma variável importante
+            dentro do planejamento de um programa
+            voltado para hipertrofia.
+
+        </p>
+
+
+        <p>
+
+            Entretanto, a principal aplicação não
+            deve ser simplesmente adicionar o maior
+            número possível de séries ao treino.
+
+        </p>
+
+
+        <ul class="analysis-list">
+
+            <li>
+
+                Se um músculo está progredindo
+                e você está recuperando bem,
+                não existe uma necessidade automática
+                de aumentar o volume.
+
+            </li>
+
+
+            <li>
+
+                Se o progresso estagnou,
+                o volume é uma das variáveis
+                que pode ser analisada e,
+                eventualmente, ajustada.
+
+            </li>
+
+
+            <li>
+
+                Aumentar o volume deve ser uma
+                estratégia baseada na resposta
+                do indivíduo, e não uma obrigação.
+
+            </li>
+
+
+            <li>
+
+                Mais séries também podem aumentar
+                a demanda de recuperação e a
+                dificuldade de manter qualidade
+                ao longo do treinamento.
+
+            </li>
+
+        </ul>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         O QUE NÃO SIGNIFICA
+    ========================= -->
+
+    <section class="section not-mean">
+
+
+        <div class="section-label">
+
+            INTERPRETAÇÃO
+
+        </div>
+
+
+        <h2>
+
+            O que este estudo não significa?
+
+        </h2>
+
+
+        <ul class="analysis-list">
+
+            <li>
+
+                Não significa que mais volume
+                será sempre melhor em qualquer
+                quantidade.
+
+            </li>
+
+
+            <li>
+
+                Não significa que todos os músculos
+                precisam receber o mesmo número
+                de séries.
+
+            </li>
+
+
+            <li>
+
+                Não permite definir um número
+                universalmente ideal de séries
+                para todas as pessoas.
+
+            </li>
+
+
+            <li>
+
+                Não significa que uma série adicional
+                produzirá exatamente a mesma quantidade
+                de hipertrofia em qualquer contexto.
+
+            </li>
+
+
+            <li>
+
+                Não substitui a necessidade de
+                considerar recuperação, desempenho
+                e resposta individual.
+
+            </li>
+
+        </ul>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         LIMITAÇÕES
+    ========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            LIMITAÇÕES
+
+        </div>
+
+
+        <h2>
+
+            Até onde podemos extrapolar?
+
+        </h2>
+
+
+        <p>
+
+            Apesar de uma meta-análise reunir
+            diversos estudos, os resultados ainda
+            dependem da qualidade e das características
+            dos trabalhos incluídos.
+
+        </p>
+
+
+        <ul class="analysis-list">
+
+            <li>
+
+                Os estudos analisados utilizaram
+                diferentes protocolos de treinamento.
+
+            </li>
+
+
+            <li>
+
+                Os participantes não possuíam
+                necessariamente o mesmo nível
+                de experiência.
+
+            </li>
+
+
+            <li>
+
+                Diferentes métodos podem ser usados
+                para avaliar alterações musculares.
+
+            </li>
+
+
+            <li>
+
+                A forma de contabilizar séries e
+                volume não é necessariamente
+                idêntica em todos os contextos.
+
+            </li>
+
+
+            <li>
+
+                Uma relação positiva entre volume
+                e hipertrofia não define, por si só,
+                o melhor volume para cada indivíduo.
+
+            </li>
+
+        </ul>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         PONDERAÇÃO
+    ========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            ANÁLISE MIKADESH
+
+        </div>
+
+
+        <div class="analysis">
+
+
+            <h2>
+
+                Como interpretar este estudo?
+
+            </h2>
+
+
+            <p>
+
+                Este estudo é importante porque
+                oferece uma base sólida para a ideia
+                de que o volume de treinamento é
+                uma variável relevante para a hipertrofia.
+
+            </p>
+
+
+            <p>
+
+                Entretanto, a interpretação mais útil
+                não é transformar o resultado em uma
+                regra simples de que "mais séries são
+                sempre melhores".
+
+            </p>
+
+
+            <p>
+
+                O resultado indica uma tendência
+                geral dentro do conjunto de dados
+                analisado: aumentar o volume pode
+                aumentar o potencial de hipertrofia.
+
+            </p>
+
+
+            <p>
+
+                Na prática, porém, o treinamento
+                acontece dentro de um contexto que
+                envolve recuperação, desempenho,
+                qualidade das séries e resposta
+                individual.
+
+            </p>
+
+
+            <p>
+
+                Portanto, este estudo deve ser
+                interpretado como uma evidência
+                de que o volume importa — e não
+                como uma justificativa para aumentar
+                séries indefinidamente.
+
+            </p>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         CONCLUSÃO
+    ========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            CONCLUSÃO
+
+        </div>
+
+
+        <div class="conclusion">
+
+
+            <h2>
+
+                Conclusão da Biblioteca Científica
+
+            </h2>
+
+
+            <p>
+
+                As evidências analisadas nesta
+                meta-análise indicam que existe
+                uma relação positiva entre o volume
+                semanal de treinamento resistido
+                e os ganhos de hipertrofia.
+
+            </p>
+
+
+            <p>
+
+                Em termos gerais, realizar mais
+                séries pode aumentar o estímulo
+                disponível para o crescimento muscular.
+
+            </p>
+
+
+            <p>
+
+                Entretanto, o estudo não estabelece
+                um número universal de séries e não
+                significa que aumentar indefinidamente
+                o volume continuará sendo a melhor
+                estratégia.
+
+            </p>
+
+
+            <p>
+
+                O volume deve ser entendido como
+                uma variável que pode ser ajustada
+                de acordo com o progresso, a
+                recuperação e a resposta individual.
+
+            </p>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         FONTE ORIGINAL
+    ========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            FONTE ORIGINAL
+
+        </div>
+
+
+        <div class="source">
+
+
+            <p>
+
+                Schoenfeld BJ, Ogborn D,
+                Krieger JW.
+
+            </p>
+
+
+            <p>
+
+                <strong>
+
+                    Dose-response relationship between
+                    weekly resistance training volume
+                    and increases in muscle mass:
+                    A systematic review and meta-analysis.
+
+                </strong>
+
+            </p>
+
+
+            <p>
+
+                Journal of Sports Sciences.
+                2017;35(11):1073–1082.
+
+            </p>
+
+
+            <a
+            href="https://pubmed.ncbi.nlm.nih.gov/27433992/"
+            target="_blank"
+            >
+
+                → Ver estudo original no PubMed
+
+            </a>
+
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================
+     RODAPÉ
+========================= -->
+
+<footer>
+
+    © 2026 Metodologia MKS
+
+</footer>
+
+
+</body>
+
+</html>
+```
