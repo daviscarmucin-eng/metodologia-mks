@@ -1,0 +1,1627 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+12, 20 ou Mais de 20 Séries? — Biblioteca Científica
+</title>
+
+
+<style>
+
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#0b0b0b;
+    color:#fff;
+    line-height:1.7;
+}
+
+
+/* =========================
+   NAVEGAÇÃO
+========================= */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 6%;
+
+    background:#0b0b0b;
+    border-bottom:1px solid #222;
+}
+
+.logo{
+    font-size:20px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#18b15a;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav a{
+    color:#ccc;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#18b15a;
+}
+
+
+/* =========================
+   CONTEÚDO PRINCIPAL
+========================= */
+
+main{
+    max-width:1000px;
+    margin:auto;
+    padding:80px 20px 100px;
+}
+
+
+.tag{
+    color:#18b15a;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:3px;
+    margin-bottom:15px;
+}
+
+
+.back{
+    display:inline-block;
+    margin-bottom:35px;
+
+    color:#888;
+    text-decoration:none;
+
+    font-size:14px;
+
+    transition:.3s;
+}
+
+.back:hover{
+    color:#18b15a;
+}
+
+
+h1{
+    font-size:54px;
+    line-height:1.1;
+    max-width:850px;
+    margin-bottom:20px;
+}
+
+
+.subtitle{
+    color:#aaa;
+    font-size:18px;
+    max-width:760px;
+    margin-bottom:25px;
+}
+
+
+.study-type{
+    color:#18b15a;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:1px;
+
+    margin-bottom:55px;
+}
+
+
+/* =========================
+   SEÇÕES
+========================= */
+
+.section{
+    margin-bottom:65px;
+}
+
+
+.section-label{
+    color:#18b15a;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:2px;
+
+    margin-bottom:12px;
+}
+
+
+.section h2{
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+
+.section p{
+    color:#b5b5b5;
+    font-size:17px;
+    margin-bottom:18px;
+}
+
+
+/* =========================
+   RESPOSTA RÁPIDA
+========================= */
+
+.quick-answer{
+    background:#141414;
+
+    border:1px solid #242424;
+
+    border-left:3px solid #18b15a;
+
+    border-radius:10px;
+
+    padding:28px;
+
+    margin-bottom:65px;
+}
+
+
+.quick-answer h2{
+    font-size:23px;
+    margin-bottom:12px;
+}
+
+
+.quick-answer p{
+    color:#d0d0d0;
+    font-size:17px;
+}
+
+
+/* =========================
+   FICHA TÉCNICA
+========================= */
+
+.study-info{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:12px;
+
+    margin-top:25px;
+}
+
+
+.info-box{
+
+    background:#141414;
+
+    border:1px solid #242424;
+
+    border-radius:10px;
+
+    padding:20px;
+}
+
+
+.info-label{
+
+    color:#18b15a;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+    margin-bottom:7px;
+}
+
+
+.info-value{
+
+    color:#d0d0d0;
+
+    font-size:15px;
+}
+
+
+/* =========================
+   LISTAS
+========================= */
+
+.analysis-list{
+
+    margin-top:20px;
+
+    padding-left:20px;
+}
+
+
+.analysis-list li{
+
+    color:#b5b5b5;
+
+    font-size:17px;
+
+    margin-bottom:12px;
+}
+
+
+/* =========================
+   DESTAQUE
+========================= */
+
+.highlight{
+
+    background:#141414;
+
+    border:1px solid #242424;
+
+    border-radius:10px;
+
+    padding:28px;
+
+    margin-top:25px;
+}
+
+
+.highlight strong{
+
+    color:#18b15a;
+}
+
+
+/* =========================
+   INTERPRETAÇÃO
+========================= */
+
+.not-mean{
+
+    border-left:3px solid #555;
+
+    padding-left:22px;
+}
+
+
+/* =========================
+   ANÁLISE
+========================= */
+
+.analysis{
+
+    background:#111;
+
+    border:1px solid #242424;
+
+    border-radius:12px;
+
+    padding:32px;
+}
+
+
+.analysis h2{
+
+    margin-bottom:18px;
+}
+
+
+/* =========================
+   CONCLUSÃO
+========================= */
+
+.conclusion{
+
+    background:#141414;
+
+    border:1px solid #18b15a;
+
+    border-radius:12px;
+
+    padding:32px;
+}
+
+
+.conclusion h2{
+
+    margin-bottom:18px;
+}
+
+
+/* =========================
+   FONTE
+========================= */
+
+.source{
+
+    background:#141414;
+
+    border:1px solid #242424;
+
+    border-radius:12px;
+
+    padding:28px;
+}
+
+
+.source p{
+
+    font-size:15px;
+
+    color:#aaa;
+
+    margin-bottom:15px;
+}
+
+
+.source a{
+
+    display:inline-block;
+
+    color:#18b15a;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:bold;
+}
+
+
+.source a:hover{
+
+    color:#fff;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer{
+
+    text-align:center;
+
+    padding:30px;
+
+    border-top:1px solid #222;
+
+    color:#777;
+
+    font-size:13px;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media(max-width:800px){
+
+    nav{
+
+        flex-direction:column;
+
+        gap:15px;
+    }
+
+
+    nav ul{
+
+        gap:15px;
+    }
+
+
+    main{
+
+        padding-top:60px;
+    }
+
+
+    h1{
+
+        font-size:40px;
+    }
+
+
+    .section h2{
+
+        font-size:26px;
+    }
+
+
+    .study-info{
+
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVEGAÇÃO
+========================= -->
+
+<nav>
+
+    <div class="logo">
+
+        METODOLOGIA
+        <span>MKS</span>
+
+    </div>
+
+
+    <ul>
+
+        <li>
+            <a href="biblioteca.html">
+                Biblioteca
+            </a>
+        </li>
+
+
+        <li>
+            <a href="consultoria.html">
+                Consultoria
+            </a>
+        </li>
+
+
+        <li>
+            <a href="industries.html">
+                Industries
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+
+<!-- =========================
+     CONTEÚDO PRINCIPAL
+========================= -->
+
+<main>
+
+
+    <div class="tag">
+
+        03 / VOLUME DE TREINO
+
+    </div>
+
+
+    <a
+    href="volume.html"
+    class="back"
+    >
+
+        ← Voltar para Volume de Treino
+
+    </a>
+
+
+
+    <!-- =========================
+         TÍTULO
+    ========================= -->
+
+    <h1>
+
+        12, 20 ou mais de 20 séries?
+
+    </h1>
+
+
+    <p class="subtitle">
+
+        Uma revisão sistemática com meta-análise
+        investigando como diferentes quantidades
+        de séries semanais podem influenciar
+        a hipertrofia muscular.
+
+    </p>
+
+
+    <div class="study-type">
+
+        REVISÃO SISTEMÁTICA • META-ANÁLISE • 2022
+
+    </div>
+
+
+
+    <!-- =========================
+         PERGUNTA
+    ========================= -->
+
+    <section class="section">
+
+        <div class="section-label">
+
+            PERGUNTA INVESTIGADA
+
+        </div>
+
+
+        <h2>
+
+            Existe uma faixa de volume que parece
+            oferecer bons resultados para hipertrofia?
+
+        </h2>
+
+
+        <p>
+
+            Uma das perguntas mais frequentes sobre
+            treinamento para hipertrofia é até que
+            ponto aumentar o número de séries
+            continua trazendo benefícios.
+
+        </p>
+
+
+        <p>
+
+            Estudos anteriores já haviam sugerido
+            uma relação dose-resposta entre volume
+            semanal e crescimento muscular. Porém,
+            uma dúvida permanecia:
+
+        </p>
+
+
+        <div class="highlight">
+
+            <p>
+
+                <strong>
+
+                    Depois de determinado volume,
+                    continuar adicionando séries
+                    ainda produz ganhos relevantes?
+
+                </strong>
+
+            </p>
+
+        </div>
+
+
+        <p>
+
+            A revisão de Baz-Valle e colaboradores
+            buscou justamente analisar essa questão,
+            comparando principalmente volumes
+            moderados e altos em indivíduos
+            previamente treinados.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         RESPOSTA RÁPIDA
+    ========================= -->
+
+    <div class="quick-answer">
+
+        <h2>
+
+            Resposta rápida
+
+        </h2>
+
+
+        <p>
+
+            Para quadríceps e bíceps braquial,
+            a análise não encontrou diferença
+            estatisticamente significativa entre
+            realizar 12–20 séries semanais e
+            realizar mais de 20 séries semanais.
+
+        </p>
+
+
+        <p>
+
+            Para o tríceps braquial, entretanto,
+            o maior volume apresentou vantagem
+            para o ganho de massa muscular.
+
+        </p>
+
+
+        <p>
+
+            Isso sugere que aumentar o volume acima
+            de 20 séries não produz necessariamente
+            mais hipertrofia em todos os músculos,
+            mas a resposta pode variar conforme
+            a musculatura analisada.
+
+        </p>
+
+    </div>
+
+
+
+    <!-- =========================
+         FICHA TÉCNICA
+    ========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            SOBRE A REVISÃO
+
+        </div>
+
+
+        <h2>
+
+            Ficha técnica
+
+        </h2>
+
+
+        <div class="study-info">
+
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    AUTORES
+
+                </div>
+
+                <div class="info-value">
+
+                    Eneko Baz-Valle,
+                    Carlos Balsalobre-Fernández,
+                    Carlos Alix-Fages e
+                    Jordan Santos-Concejero
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    ANO
+
+                </div>
+
+                <div class="info-value">
+
+                    2022
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    TIPO DE ESTUDO
+
+                </div>
+
+                <div class="info-value">
+
+                    Revisão sistemática
+                    com meta-análise
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    BUSCA CIENTÍFICA
+
+                </div>
+
+                <div class="info-value">
+
+                    PubMed, Scopus e
+                    Cochrane Library
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    ESTUDOS ANALISADOS
+
+                </div>
+
+                <div class="info-value">
+
+                    7 na revisão qualitativa
+                    e 6 na meta-análise
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    PARTICIPANTES
+
+                </div>
+
+                <div class="info-value">
+
+                    Jovens adultos treinados
+                    em musculação
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    MEDIDAS DE HIPERTROFIA
+
+                </div>
+
+                <div class="info-value">
+
+                    Espessura muscular e/ou
+                    área de secção transversal
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    CLASSIFICAÇÃO DE VOLUME
+
+                </div>
+
+                <div class="info-value">
+
+                    <12, 12–20 e
+                    >20 séries semanais
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CLASSIFICAÇÃO
+    ========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            VOLUME ANALISADO
+
+        </div>
+
+
+        <h2>
+
+            Como os pesquisadores classificaram
+            o volume semanal?
+
+        </h2>
+
+
+        <p>
+
+            Para organizar os estudos encontrados,
+            os pesquisadores dividiram os protocolos
+            em três categorias principais.
+
+        </p>
+
+
+        <ul class="analysis-list">
+
+            <li>
+
+                <strong>Volume baixo:</strong>
+                menos de 12 séries semanais
+                por grupo muscular.
+
+            </li>
+
+
+            <li>
+
+                <strong>Volume moderado:</strong>
+                entre 12 e 20 séries semanais
+                por grupo muscular.
+
+            </li>
+
+
+            <li>
+
+                <strong>Volume alto:</strong>
+                mais de 20 séries semanais
+                por grupo muscular.
+
+            </li>
+
+        </ul>
+
+
+        <p>
+
+            A comparação quantitativa principal
+            da meta-análise foi realizada entre
+            os protocolos moderados e altos.
+
+        </p>
+
+
+        <div class="highlight">
+
+            <p>
+
+                <strong>
+
+                    A pergunta central não era
+                    simplesmente se mais séries
+                    funcionam, mas se ultrapassar
+                    aproximadamente 20 séries
+                    continua trazendo vantagens
+                    consistentes.
+
+                </strong>
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         RESULTADOS
+    ========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            RESULTADOS
+
+        </div>
+
+
+        <h2>
+
+            O que a meta-análise encontrou?
+
+        </h2>
+
+
+        <p>
+
+            Para o quadríceps, não foi encontrada
+            diferença estatisticamente significativa
+            entre os protocolos de 12–20 séries
+            semanais e aqueles com mais de 20 séries.
+
+        </p>
+
+
+        <p>
+
+            O mesmo aconteceu para o bíceps braquial:
+            o aumento do volume acima de 20 séries
+            semanais não apresentou uma vantagem
+            estatisticamente significativa em relação
+            ao volume moderado.
+
+        </p>
+
+
+        <p>
+
+            Para o tríceps braquial, porém,
+            o maior volume apresentou vantagem
+            estatisticamente significativa para
+            hipertrofia.
+
+        </p>
+
+
+        <div class="highlight">
+
+            <p>
+
+                <strong>
+
+                    Quadríceps:</strong>
+                    sem diferença significativa
+                    entre 12–20 e mais de 20 séries.
+
+                <br><br>
+
+                <strong>
+
+                    Bíceps:</strong>
+                    sem diferença significativa
+                    entre 12–20 e mais de 20 séries.
+
+                <br><br>
+
+                <strong>
+
+                    Tríceps:</strong>
+                    vantagem para o volume
+                    superior a 20 séries semanais.
+
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         O QUE ISSO SIGNIFICA?
+    ========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            INTERPRETAÇÃO
+
+        </div>
+
+
+        <h2>
+
+            Mais de 20 séries são melhores?
+
+        </h2>
+
+
+        <p>
+
+            Não necessariamente.
+
+        </p>
+
+
+        <p>
+
+            A interpretação mais interessante
+            deste estudo é justamente que a relação
+            entre volume e hipertrofia não parece
+            ser simplesmente linear e infinita.
+
+        </p>
+
+
+        <p>
+
+            Aumentar o volume pode ser útil em
+            determinadas situações e para determinados
+            músculos, mas não existe evidência de que
+            ultrapassar 20 séries semanais seja
+            automaticamente superior para todo o corpo.
+
+        </p>
+
+
+        <div class="highlight">
+
+            <p>
+
+                <strong>
+
+                    Mais volume não significa,
+                    obrigatoriamente, mais músculo
+                    de forma proporcional.
+
+                </strong>
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         APLICAÇÃO PRÁTICA
+    ========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            APLICAÇÃO PRÁTICA
+
+        </div>
+
+
+        <h2>
+
+            Como isso pode ser usado no treino?
+
+        </h2>
+
+
+        <p>
+
+            Este estudo ajuda a reforçar a ideia
+            de que o objetivo não deve ser acumular
+            o maior número possível de séries.
+
+        </p>
+
+
+        <ul class="analysis-list">
+
+            <li>
+
+                Uma faixa de 12–20 séries semanais
+                pode representar uma referência
+                eficiente para muitos praticantes
+                e músculos.
+
+            </li>
+
+
+            <li>
+
+                Volumes superiores a 20 séries podem
+                ser úteis, mas não devem ser tratados
+                como uma necessidade universal.
+
+            </li>
+
+
+            <li>
+
+                Diferentes músculos podem responder
+                de maneira diferente ao aumento
+                do volume.
+
+            </li>
+
+
+            <li>
+
+                A capacidade individual de recuperar
+                entre as sessões continua sendo um
+                fator importante.
+
+            </li>
+
+
+            <li>
+
+                O volume deve ser ajustado de acordo
+                com a resposta individual e não apenas
+                com base em um número fixo.
+
+            </li>
+
+        </ul>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         O QUE NÃO SIGNIFICA
+    ========================= -->
+
+    <section class="section not-mean">
+
+
+        <div class="section-label">
+
+            O QUE ESTE ESTUDO NÃO SIGNIFICA
+
+        </div>
+
+
+        <h2>
+
+            O que não podemos concluir?
+
+        </h2>
+
+
+        <ul class="analysis-list">
+
+            <li>
+
+                Não significa que 12 séries sejam
+                automaticamente suficientes para
+                todas as pessoas e músculos.
+
+            </li>
+
+
+            <li>
+
+                Não significa que 20 séries sejam
+                um limite máximo universal.
+
+            </li>
+
+
+            <li>
+
+                Não significa que mais de 20 séries
+                sejam inúteis.
+
+            </li>
+
+
+            <li>
+
+                Não significa que todos os músculos
+                respondam da mesma maneira.
+
+            </li>
+
+
+            <li>
+
+                Não significa que o número de séries,
+                isoladamente, determine a hipertrofia.
+
+            </li>
+
+        </ul>
+
+    </section>
+
+
+
+    <!-- =========================
+         LIMITAÇÕES
+    ========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            LIMITAÇÕES
+
+        </div>
+
+
+        <h2>
+
+            O que devemos considerar?
+
+        </h2>
+
+
+        <p>
+
+            Embora seja uma revisão sistemática com
+            meta-análise, o número de estudos que
+            cumpriu todos os critérios de inclusão
+            foi relativamente limitado.
+
+        </p>
+
+
+        <ul class="analysis-list">
+
+            <li>
+
+                Apenas sete estudos foram incluídos
+                na análise qualitativa.
+
+            </li>
+
+
+            <li>
+
+                Seis estudos foram incluídos
+                na meta-análise.
+
+            </li>
+
+
+            <li>
+
+                A maior parte da evidência analisada
+                envolveu homens jovens e treinados.
+
+            </li>
+
+
+            <li>
+
+                Os protocolos utilizados nos estudos
+                apresentavam diferenças além do
+                simples número de séries.
+
+            </li>
+
+
+            <li>
+
+                A resposta ao volume pode variar
+                entre diferentes grupos musculares.
+
+            </li>
+
+        </ul>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         ANÁLISE MIKADESH
+    ========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            ANÁLISE MIKADESH
+
+        </div>
+
+
+        <div class="analysis">
+
+
+            <h2>
+
+                Como interpretar esses resultados?
+
+            </h2>
+
+
+            <p>
+
+                Este estudo é especialmente
+                interessante porque vai além da
+                pergunta simples de que mais séries
+                podem gerar mais hipertrofia.
+
+            </p>
+
+
+            <p>
+
+                A pergunta aqui é mais específica:
+
+            </p>
+
+
+            <div class="highlight">
+
+                <p>
+
+                    <strong>
+
+                        Depois de uma determinada
+                        quantidade de séries,
+                        continuar aumentando o volume
+                        realmente vale a pena?
+
+                    </strong>
+
+                </p>
+
+            </div>
+
+
+            <p>
+
+                Os resultados sugerem que a resposta
+                depende do músculo analisado.
+
+            </p>
+
+
+            <p>
+
+                Para quadríceps e bíceps, aumentar
+                o volume acima de 20 séries semanais
+                não apresentou vantagem significativa
+                sobre a faixa de 12–20 séries dentro
+                dos estudos analisados.
+
+            </p>
+
+
+            <p>
+
+                Para o tríceps, o maior volume
+                apresentou uma resposta diferente.
+
+            </p>
+
+
+            <p>
+
+                Para a prática, isso reforça uma
+                ideia importante: volume deve ser
+                tratado como uma variável que pode
+                ser ajustada, e não como uma corrida
+                para alcançar o maior número possível
+                de séries.
+
+            </p>
+
+
+            <p>
+
+                Uma quantidade menor de séries que
+                permite bom desempenho, progressão
+                e recuperação pode ser mais produtiva
+                do que adicionar séries apenas para
+                aumentar um número semanal.
+
+            </p>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         CONCLUSÃO
+    ========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            CONCLUSÃO
+
+        </div>
+
+
+        <div class="conclusion">
+
+
+            <h2>
+
+                Conclusão da Biblioteca Científica
+
+            </h2>
+
+
+            <p>
+
+                A revisão sistemática com meta-análise
+                sugere que uma faixa de 12–20 séries
+                semanais pode representar uma referência
+                eficiente para hipertrofia em jovens
+                treinados.
+
+            </p>
+
+
+            <p>
+
+                Ultrapassar 20 séries semanais não
+                demonstrou vantagem significativa para
+                quadríceps e bíceps dentro da análise,
+                embora tenha apresentado vantagem
+                para o tríceps braquial.
+
+            </p>
+
+
+            <p>
+
+                Portanto, o estudo não aponta para
+                um número universal de séries.
+
+            </p>
+
+
+            <p>
+
+                A principal mensagem é que o aumento
+                do volume apresenta retornos que podem
+                variar conforme o músculo e o contexto,
+                tornando a individualização necessária.
+
+            </p>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         FONTE ORIGINAL
+    ========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            FONTE ORIGINAL
+
+        </div>
+
+
+        <div class="source">
+
+
+            <p>
+
+                Baz-Valle E.,
+                Balsalobre-Fernández C.,
+                Alix-Fages C. e
+                Santos-Concejero J.
+
+            </p>
+
+
+            <p>
+
+                <strong>
+
+                    A Systematic Review of The Effects
+                    of Different Resistance Training
+                    Volumes on Muscle Hypertrophy.
+
+                </strong>
+
+            </p>
+
+
+            <p>
+
+                Journal of Human Kinetics.
+                2022;81:199–210.
+
+            </p>
+
+
+            <a
+            href="https://pubmed.ncbi.nlm.nih.gov/35291645/"
+            target="_blank"
+            >
+
+                → Ver estudo original no PubMed
+
+            </a>
+
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================
+     RODAPÉ
+========================= -->
+
+<footer>
+
+    © 2026 Metodologia MKS
+
+</footer>
+
+
+</body>
+
+</html>
+```
