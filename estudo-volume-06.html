@@ -1,18 +1,569 @@
-<!-- ESTUDO 06 -->
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-<div class="study-card">
+<head>
 
-    <div class="number">
+<meta charset="UTF-8">
 
-        06
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+6 a 9 séries semanais são suficientes para hipertrofia? — Biblioteca Científica
+</title>
+
+
+<style>
+
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#0b0b0b;
+    color:#fff;
+    line-height:1.7;
+}
+
+
+/* =========================
+   NAVEGAÇÃO
+========================= */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 6%;
+
+    background:#0b0b0b;
+    border-bottom:1px solid #222;
+}
+
+.logo{
+    font-size:20px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#18b15a;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav a{
+    color:#ccc;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#18b15a;
+}
+
+
+/* =========================
+   CONTEÚDO PRINCIPAL
+========================= */
+
+main{
+    max-width:1000px;
+    margin:auto;
+    padding:80px 20px 100px;
+}
+
+
+.tag{
+    color:#18b15a;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:3px;
+    margin-bottom:15px;
+}
+
+
+.back{
+    display:inline-block;
+    margin-bottom:35px;
+
+    color:#888;
+    text-decoration:none;
+
+    font-size:14px;
+
+    transition:.3s;
+}
+
+.back:hover{
+    color:#18b15a;
+}
+
+
+h1{
+    font-size:54px;
+    line-height:1.1;
+    max-width:850px;
+    margin-bottom:20px;
+}
+
+
+.subtitle{
+    color:#aaa;
+    font-size:18px;
+    max-width:760px;
+    margin-bottom:25px;
+}
+
+
+.study-type{
+    color:#18b15a;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:1px;
+
+    margin-bottom:55px;
+}
+
+
+/* =========================
+   SEÇÕES
+========================= */
+
+.section{
+    margin-bottom:65px;
+}
+
+
+.section-label{
+    color:#18b15a;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:2px;
+
+    margin-bottom:12px;
+}
+
+
+.section h2{
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+
+.section p{
+    color:#b5b5b5;
+    font-size:17px;
+    margin-bottom:18px;
+}
+
+
+/* =========================
+   RESPOSTA RÁPIDA
+========================= */
+
+.quick-answer{
+    background:#141414;
+
+    border:1px solid #242424;
+
+    border-left:3px solid #18b15a;
+
+    border-radius:10px;
+
+    padding:28px;
+
+    margin-bottom:65px;
+}
+
+
+.quick-answer h2{
+    font-size:23px;
+    margin-bottom:12px;
+}
+
+
+.quick-answer p{
+    color:#d0d0d0;
+    font-size:17px;
+}
+
+
+/* =========================
+   FICHA TÉCNICA
+========================= */
+
+.study-info{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:12px;
+
+    margin-top:25px;
+}
+
+
+.info-box{
+
+    background:#141414;
+
+    border:1px solid #242424;
+
+    border-radius:10px;
+
+    padding:20px;
+}
+
+
+.info-label{
+
+    color:#18b15a;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+    margin-bottom:7px;
+}
+
+
+.info-value{
+
+    color:#d0d0d0;
+
+    font-size:15px;
+
+}
+
+
+/* =========================
+   LISTAS
+========================= */
+
+.analysis-list{
+
+    margin-top:20px;
+
+    padding-left:20px;
+}
+
+
+.analysis-list li{
+
+    color:#b5b5b5;
+
+    font-size:17px;
+
+    margin-bottom:12px;
+}
+
+
+/* =========================
+   DESTAQUE
+========================= */
+
+.highlight{
+
+    background:#141414;
+
+    border:1px solid #242424;
+
+    border-radius:10px;
+
+    padding:28px;
+
+    margin-top:25px;
+}
+
+
+.highlight strong{
+
+    color:#18b15a;
+}
+
+
+/* =========================
+   INTERPRETAÇÃO
+========================= */
+
+.not-mean{
+
+    border-left:3px solid #555;
+
+    padding-left:22px;
+}
+
+
+/* =========================
+   ANÁLISE MIKADESH
+========================= */
+
+.analysis{
+
+    background:#111;
+
+    border:1px solid #242424;
+
+    border-radius:12px;
+
+    padding:32px;
+}
+
+
+.analysis h2{
+
+    margin-bottom:18px;
+
+}
+
+
+/* =========================
+   CONCLUSÃO
+========================= */
+
+.conclusion{
+
+    background:#141414;
+
+    border:1px solid #18b15a;
+
+    border-radius:12px;
+
+    padding:32px;
+}
+
+
+.conclusion h2{
+
+    margin-bottom:18px;
+
+}
+
+
+/* =========================
+   FONTE
+========================= */
+
+.source{
+
+    background:#141414;
+
+    border:1px solid #242424;
+
+    border-radius:12px;
+
+    padding:28px;
+}
+
+
+.source p{
+
+    font-size:15px;
+
+    color:#aaa;
+
+    margin-bottom:15px;
+}
+
+
+.source a{
+
+    display:inline-block;
+
+    color:#18b15a;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:bold;
+}
+
+
+.source a:hover{
+
+    color:#fff;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer{
+
+    text-align:center;
+
+    padding:30px;
+
+    border-top:1px solid #222;
+
+    color:#777;
+
+    font-size:13px;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media(max-width:800px){
+
+    nav{
+
+        flex-direction:column;
+
+        gap:15px;
+    }
+
+
+    nav ul{
+
+        gap:15px;
+    }
+
+
+    main{
+
+        padding-top:60px;
+    }
+
+
+    h1{
+
+        font-size:40px;
+    }
+
+
+    .section h2{
+
+        font-size:26px;
+    }
+
+
+    .study-info{
+
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVEGAÇÃO
+========================= -->
+
+<nav>
+
+    <div class="logo">
+
+        METODOLOGIA
+        <span>MKS</span>
 
     </div>
 
-    <h2>
+
+    <ul>
+
+        <li>
+            <a href="biblioteca.html">
+                Biblioteca
+            </a>
+        </li>
+
+
+        <li>
+            <a href="consultoria.html">
+                Consultoria
+            </a>
+        </li>
+
+
+        <li>
+            <a href="industries.html">
+                Industries
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+
+<!-- =========================
+     CONTEÚDO PRINCIPAL
+========================= -->
+
+<main>
+
+
+    <div class="tag">
+
+        06 / VOLUME DE TREINO
+
+    </div>
+
+
+    <a
+    href="volume.html"
+    class="back"
+    >
+
+        ← Voltar para Volume de Treino
+
+    </a>
+
+
+
+    <!-- =========================
+         TÍTULO
+    ========================= -->
+
+    <h1>
 
         6 a 9 séries semanais são suficientes para hipertrofia?
 
-    </h2>
+    </h1>
+
+
+    <p class="subtitle">
+
+        Uma análise sobre a relação entre o volume
+        semanal de treinamento e as adaptações
+        musculares em indivíduos com experiência
+        prévia em treinamento resistido.
+
+    </p>
+
 
     <div class="study-type">
 
@@ -20,22 +571,1045 @@
 
     </div>
 
-    <p>
 
-        Um estudo experimental avaliou se volumes
-        relativamente baixos de treinamento já são
-        suficientes para produzir hipertrofia em
-        indivíduos treinados.
 
-    </p>
+    <!-- =========================
+         PERGUNTA
+    ========================= -->
 
-    <a
-    href="estudo-volume-06.html"
-    class="study-link"
-    >
+    <section class="section">
 
-        → Ler análise
+        <div class="section-label">
 
-    </a>
+            PERGUNTA INVESTIGADA
 
-</div>
+        </div>
+
+
+        <h2>
+
+            Volumes relativamente baixos já são
+            suficientes para produzir hipertrofia
+            em indivíduos treinados?
+
+        </h2>
+
+
+        <p>
+
+            Sabemos que aumentar o volume de
+            treinamento pode influenciar as adaptações
+            musculares.
+
+        </p>
+
+
+        <p>
+
+            Entretanto, ainda existe uma questão
+            importante: é necessário utilizar volumes
+            muito altos para continuar produzindo
+            hipertrofia em pessoas que já treinam
+            regularmente?
+
+        </p>
+
+
+        <p>
+
+            Este estudo comparou diferentes volumes
+            semanais de treinamento para investigar
+            como 9, 18 e 27 séries poderiam afetar
+            as adaptações musculares em indivíduos
+            treinados.
+
+        </p>
+
+
+        <div class="highlight">
+
+            <p>
+
+                <strong>
+
+                    A pergunta central foi:
+
+                </strong>
+
+                um volume de apenas 9 séries semanais
+                para o bíceps já seria suficiente para
+                produzir aumento da espessura muscular
+                em indivíduos treinados?
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         RESPOSTA RÁPIDA
+========================= -->
+
+    <div class="quick-answer">
+
+        <h2>
+
+            Resposta rápida
+
+        </h2>
+
+
+        <p>
+
+            Sim. Os três grupos apresentaram aumento
+            significativo da espessura muscular do
+            bíceps após seis semanas de treinamento.
+
+        </p>
+
+
+        <p>
+
+            O grupo que realizou 9 séries semanais
+            apresentou aumento significativo da
+            espessura muscular, assim como os grupos
+            que realizaram 18 e 27 séries.
+
+        </p>
+
+
+        <p>
+
+            Porém, não foram encontradas diferenças
+            estatisticamente significativas entre os
+            grupos para as alterações de espessura
+            muscular.
+
+        </p>
+
+
+        <p>
+
+            Portanto, dentro das condições deste estudo,
+            9 séries semanais foram suficientes para
+            produzir hipertrofia mensurável em indivíduos
+            treinados.
+
+        </p>
+
+    </div>
+
+
+
+    <!-- =========================
+         FICHA TÉCNICA
+========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            SOBRE O ESTUDO
+
+        </div>
+
+
+        <h2>
+
+            Ficha técnica
+
+        </h2>
+
+
+        <div class="study-info">
+
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    AUTORES
+
+                </div>
+
+                <div class="info-value">
+
+                    Samuel R. Heaselgrave,
+                    James Blacker,
+                    Bart Smeuninx,
+                    James McKendry e
+                    Leigh Breen
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    ANO
+
+                </div>
+
+                <div class="info-value">
+
+                    2019
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    TIPO DE ESTUDO
+
+                </div>
+
+                <div class="info-value">
+
+                    Estudo experimental
+                    randomizado
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    PARTICIPANTES
+
+                </div>
+
+                <div class="info-value">
+
+                    49 homens jovens com
+                    experiência em treinamento
+                    resistido
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    DURAÇÃO
+
+                </div>
+
+                <div class="info-value">
+
+                    6 semanas
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    GRUPOS ANALISADOS
+
+                </div>
+
+                <div class="info-value">
+
+                    9, 18 e 27 séries semanais
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    FREQUÊNCIA
+
+                </div>
+
+                <div class="info-value">
+
+                    1 sessão semanal no grupo
+                    de menor volume e 2 sessões
+                    nos grupos de maior volume
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    PUBLICAÇÃO
+
+                </div>
+
+                <div class="info-value">
+
+                    International Journal of Sports
+                    Physiology and Performance
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         METODOLOGIA
+========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            METODOLOGIA
+
+        </div>
+
+
+        <h2>
+
+            Como o estudo foi realizado?
+
+        </h2>
+
+
+        <p>
+
+            Os pesquisadores recrutaram 49 homens
+            jovens que já possuíam experiência prévia
+            com treinamento resistido.
+
+        </p>
+
+
+        <p>
+
+            Os participantes foram distribuídos
+            aleatoriamente em três grupos, que
+            realizaram diferentes quantidades de
+            séries semanais direcionadas ao bíceps.
+
+        </p>
+
+
+        <ul class="analysis-list">
+
+            <li>
+
+                Grupo LOW: 9 séries semanais.
+
+            </li>
+
+
+            <li>
+
+                Grupo MOD: 18 séries semanais.
+
+            </li>
+
+
+            <li>
+
+                Grupo HIGH: 27 séries semanais.
+
+            </li>
+
+        </ul>
+
+
+        <p>
+
+            O grupo de menor volume realizou o
+            treinamento uma vez por semana, enquanto
+            os grupos de 18 e 27 séries distribuíram
+            o volume em duas sessões semanais.
+
+        </p>
+
+
+        <p>
+
+            O estudo teve duração de seis semanas e
+            avaliou alterações na espessura muscular
+            do bíceps, além de medidas de força
+            isométrica e força máxima.
+
+        </p>
+
+
+        <div class="highlight">
+
+            <p>
+
+                <strong>
+
+                    Um ponto importante:
+
+                </strong>
+
+                a ingestão de proteína após o exercício
+                foi controlada e os pesquisadores também
+                acompanharam a alimentação e o treinamento
+                realizado fora do protocolo.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         RESULTADOS
+========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            RESULTADOS
+
+        </div>
+
+
+        <h2>
+
+            O que os pesquisadores encontraram?
+
+        </h2>
+
+
+        <p>
+
+            A espessura muscular aumentou
+            significativamente nos três grupos.
+
+        </p>
+
+
+        <ul class="analysis-list">
+
+            <li>
+
+                9 séries: aumento de aproximadamente
+                4,3%.
+
+            </li>
+
+
+            <li>
+
+                18 séries: aumento de aproximadamente
+                9,5%.
+
+            </li>
+
+
+            <li>
+
+                27 séries: aumento de aproximadamente
+                5,4%.
+
+            </li>
+
+        </ul>
+
+
+        <p>
+
+            Apesar dos aumentos dentro dos grupos,
+            não houve diferença estatisticamente
+            significativa entre os grupos para a
+            alteração da espessura muscular.
+
+        </p>
+
+
+        <div class="highlight">
+
+            <p>
+
+                <strong>
+
+                    Em outras palavras:
+
+                </strong>
+
+                os participantes não precisaram realizar
+                18 ou 27 séries semanais para apresentar
+                aumento mensurável da espessura muscular.
+
+            </p>
+
+        </div>
+
+
+        <p>
+
+            A força de 1RM também aumentou
+            significativamente nos três grupos.
+
+        </p>
+
+
+        <p>
+
+            Já a força isométrica apresentou aumento
+            significativo apenas no grupo de maior
+            volume.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         INTERPRETAÇÃO
+========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            INTERPRETAÇÃO
+
+        </div>
+
+
+        <h2>
+
+            O que esses resultados nos mostram?
+
+        </h2>
+
+
+        <p>
+
+            O principal ponto deste estudo é que
+            um volume relativamente baixo foi capaz
+            de produzir adaptações musculares em
+            indivíduos treinados.
+
+        </p>
+
+
+        <p>
+
+            O grupo que realizou apenas 9 séries
+            semanais apresentou aumento significativo
+            da espessura muscular após seis semanas.
+
+        </p>
+
+
+        <p>
+
+            Isso mostra que não é necessário utilizar
+            volumes extremamente altos simplesmente
+            para que a hipertrofia aconteça.
+
+        </p>
+
+
+        <div class="highlight">
+
+            <p>
+
+                <strong>
+
+                    Porém, existe uma diferença importante
+                    entre "ser suficiente" e "ser o melhor
+                    possível".
+
+                </strong>
+
+                O estudo demonstrou que 9 séries foram
+                suficientes para produzir hipertrofia,
+                mas não demonstrou que 9 séries sejam
+                necessariamente o volume ótimo.
+
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         O QUE NÃO SIGNIFICA
+========================= -->
+
+    <section class="section not-mean">
+
+
+        <div class="section-label">
+
+            O QUE ESTE ESTUDO NÃO SIGNIFICA
+
+        </div>
+
+
+        <h2>
+
+            O que não podemos concluir?
+
+        </h2>
+
+
+        <ul class="analysis-list">
+
+            <li>
+
+                Não significa que 9 séries sejam o
+                volume ideal para todas as pessoas.
+
+            </li>
+
+
+            <li>
+
+                Não significa que volumes maiores
+                não possam produzir mais hipertrofia.
+
+            </li>
+
+
+            <li>
+
+                Não significa que 18 ou 27 séries
+                sejam inúteis.
+
+            </li>
+
+
+            <li>
+
+                Não significa que os resultados sejam
+                iguais para todos os músculos.
+
+            </li>
+
+
+            <li>
+
+                Não significa que seis semanas sejam
+                suficientes para determinar os efeitos
+                de longo prazo de cada volume.
+
+            </li>
+
+
+            <li>
+
+                Não significa que frequência,
+                intensidade ou proximidade da falha
+                sejam irrelevantes.
+
+            </li>
+
+        </ul>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         LIMITAÇÕES
+========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            LIMITAÇÕES
+
+        </div>
+
+
+        <h2>
+
+            Onde devemos ter cuidado?
+
+        </h2>
+
+
+        <p>
+
+            Apesar de apresentar resultados
+            interessantes, o estudo possui algumas
+            limitações que devem ser consideradas
+            antes de generalizar seus resultados.
+
+        </p>
+
+
+        <ul class="analysis-list">
+
+            <li>
+
+                O estudo teve duração de apenas
+                seis semanas.
+
+            </li>
+
+
+            <li>
+
+                A amostra foi composta por homens
+                jovens treinados.
+
+            </li>
+
+
+            <li>
+
+                O foco principal das medidas de
+                hipertrofia foi a espessura do bíceps.
+
+            </li>
+
+
+            <li>
+
+                Os grupos utilizaram frequências
+                diferentes de treinamento.
+
+            </li>
+
+
+            <li>
+
+                O tamanho da amostra foi relativamente
+                pequeno, com 49 participantes distribuídos
+                entre três grupos.
+
+            </li>
+
+
+            <li>
+
+                O estudo não permite estabelecer um
+                número universal de séries capaz de
+                maximizar a hipertrofia.
+
+            </li>
+
+        </ul>
+
+    </section>
+
+
+
+    <!-- =========================
+         ANÁLISE MIKADESH
+========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            ANÁLISE MIKADESH
+
+        </div>
+
+
+        <div class="analysis">
+
+
+            <h2>
+
+                Como interpretar este estudo?
+
+            </h2>
+
+
+            <p>
+
+                Este estudo é particularmente interessante
+                porque demonstra que a hipertrofia não
+                depende necessariamente de volumes
+                extremamente altos.
+
+            </p>
+
+
+            <p>
+
+                Mesmo indivíduos treinados apresentaram
+                aumento significativo da espessura muscular
+                realizando apenas 9 séries semanais
+                direcionadas ao bíceps.
+
+            </p>
+
+
+            <p>
+
+                Isso reforça uma ideia importante para
+                a prescrição do treinamento: existe uma
+                diferença entre a quantidade de volume
+                necessária para produzir uma adaptação
+                e a quantidade de volume que pode
+                potencialmente maximizar essa adaptação.
+
+            </p>
+
+
+            <p>
+
+                O fato de 9 séries terem sido suficientes
+                não significa que aumentar o volume acima
+                disso seja inútil.
+
+            </p>
+
+
+            <div class="highlight">
+
+                <p>
+
+                    <strong>
+
+                        A melhor interpretação é:
+
+                    </strong>
+
+                    volumes relativamente baixos podem
+                    produzir hipertrofia mesmo em indivíduos
+                    treinados, enquanto volumes maiores
+                    continuam sendo uma variável que pode
+                    ser manipulada de acordo com o objetivo,
+                    a resposta individual e a capacidade
+                    de recuperação.
+
+                </p>
+
+            </div>
+
+
+            <p>
+
+                Também é importante observar que os grupos
+                de maior volume apresentaram estimativas
+                de efeito de moderadas a grandes em relação
+                ao grupo de menor volume, especialmente
+                para algumas medidas de força.
+
+            </p>
+
+
+            <p>
+
+                Portanto, os resultados não devem ser
+                interpretados como evidência de que
+                "menos é sempre melhor", mas sim como
+                evidência de que uma quantidade relativamente
+                pequena de séries já pode ser suficiente
+                para gerar crescimento muscular.
+
+            </p>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CONCLUSÃO
+========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            CONCLUSÃO
+
+        </div>
+
+
+        <div class="conclusion">
+
+
+            <h2>
+
+                O que podemos levar deste estudo?
+
+            </h2>
+
+
+            <p>
+
+                Seis semanas de treinamento com 9,
+                18 ou 27 séries semanais produziram
+                aumentos significativos na espessura
+                muscular do bíceps em homens treinados.
+
+            </p>
+
+
+            <p>
+
+                Não foram encontradas diferenças
+                estatisticamente significativas entre
+                os grupos para as alterações de
+                espessura muscular.
+
+            </p>
+
+
+            <p>
+
+                Isso indica que 9 séries semanais podem
+                ser suficientes para produzir hipertrofia
+                em indivíduos treinados, pelo menos
+                dentro das condições avaliadas pelo estudo.
+
+            </p>
+
+
+            <p>
+
+                <strong>
+
+                    O estudo demonstra que volumes
+                    relativamente baixos já podem gerar
+                    hipertrofia — mas não determina que
+                    9 séries sejam o volume ótimo ou
+                    universal para maximizar os ganhos.
+
+                </strong>
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FONTE
+========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            FONTE ORIGINAL
+
+        </div>
+
+
+        <div class="source">
+
+
+            <p>
+
+                Heaselgrave SR, Blacker J, Smeuninx B,
+                McKendry J, Breen L.
+
+            </p>
+
+
+            <p>
+
+                <strong>
+
+                    Dose-Response Relationship of Weekly
+                    Resistance-Training Volume and Frequency
+                    on Muscular Adaptations in Trained Men.
+
+                </strong>
+
+            </p>
+
+
+            <p>
+
+                International Journal of Sports Physiology
+                and Performance. 2019;14(3):360-368.
+
+            </p>
+
+
+            <a
+            href="https://pubmed.ncbi.nlm.nih.gov/30160627/"
+            target="_blank"
+            >
+
+                → Ver estudo no PubMed
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================
+     RODAPÉ
+========================= -->
+
+<footer>
+
+    © 2026 Metodologia MKS
+
+</footer>
+
+
+</body>
+
+</html>
