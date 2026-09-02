@@ -1,0 +1,1597 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+O que realmente conta como volume? — Biblioteca Científica
+</title>
+
+
+<style>
+
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#0b0b0b;
+    color:#fff;
+    line-height:1.7;
+}
+
+
+/* =========================
+   NAVEGAÇÃO
+========================= */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 6%;
+
+    background:#0b0b0b;
+    border-bottom:1px solid #222;
+}
+
+.logo{
+    font-size:20px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#18b15a;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav a{
+    color:#ccc;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#18b15a;
+}
+
+
+/* =========================
+   CONTEÚDO PRINCIPAL
+========================= */
+
+main{
+    max-width:1000px;
+    margin:auto;
+    padding:80px 20px 100px;
+}
+
+
+.tag{
+    color:#18b15a;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:3px;
+    margin-bottom:15px;
+}
+
+
+.back{
+    display:inline-block;
+    margin-bottom:35px;
+
+    color:#888;
+    text-decoration:none;
+
+    font-size:14px;
+
+    transition:.3s;
+}
+
+.back:hover{
+    color:#18b15a;
+}
+
+
+h1{
+    font-size:54px;
+    line-height:1.1;
+    max-width:850px;
+    margin-bottom:20px;
+}
+
+
+.subtitle{
+    color:#aaa;
+    font-size:18px;
+    max-width:760px;
+    margin-bottom:25px;
+}
+
+
+.study-type{
+    color:#18b15a;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:1px;
+
+    margin-bottom:55px;
+}
+
+
+/* =========================
+   SEÇÕES
+========================= */
+
+.section{
+    margin-bottom:65px;
+}
+
+
+.section-label{
+    color:#18b15a;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:2px;
+
+    margin-bottom:12px;
+}
+
+
+.section h2{
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+
+.section p{
+    color:#b5b5b5;
+    font-size:17px;
+    margin-bottom:18px;
+}
+
+
+/* =========================
+   RESPOSTA RÁPIDA
+========================= */
+
+.quick-answer{
+    background:#141414;
+
+    border:1px solid #242424;
+
+    border-left:3px solid #18b15a;
+
+    border-radius:10px;
+
+    padding:28px;
+
+    margin-bottom:65px;
+}
+
+
+.quick-answer h2{
+    font-size:23px;
+    margin-bottom:12px;
+}
+
+
+.quick-answer p{
+    color:#d0d0d0;
+    font-size:17px;
+}
+
+
+/* =========================
+   FICHA TÉCNICA
+========================= */
+
+.study-info{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:12px;
+
+    margin-top:25px;
+}
+
+
+.info-box{
+
+    background:#141414;
+
+    border:1px solid #242424;
+
+    border-radius:10px;
+
+    padding:20px;
+}
+
+
+.info-label{
+
+    color:#18b15a;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+    margin-bottom:7px;
+}
+
+
+.info-value{
+
+    color:#d0d0d0;
+
+    font-size:15px;
+}
+
+
+/* =========================
+   LISTAS
+========================= */
+
+.analysis-list{
+
+    margin-top:20px;
+
+    padding-left:20px;
+}
+
+
+.analysis-list li{
+
+    color:#b5b5b5;
+
+    font-size:17px;
+
+    margin-bottom:12px;
+}
+
+
+/* =========================
+   DESTAQUE
+========================= */
+
+.highlight{
+
+    background:#141414;
+
+    border:1px solid #242424;
+
+    border-radius:10px;
+
+    padding:28px;
+
+    margin-top:25px;
+}
+
+
+.highlight strong{
+
+    color:#18b15a;
+}
+
+
+/* =========================
+   INTERPRETAÇÃO
+========================= */
+
+.not-mean{
+
+    border-left:3px solid #555;
+
+    padding-left:22px;
+}
+
+
+/* =========================
+   ANÁLISE MIKADESH
+========================= */
+
+.analysis{
+
+    background:#111;
+
+    border:1px solid #242424;
+
+    border-radius:12px;
+
+    padding:32px;
+}
+
+
+.analysis h2{
+
+    margin-bottom:18px;
+}
+
+
+/* =========================
+   CONCLUSÃO
+========================= */
+
+.conclusion{
+
+    background:#141414;
+
+    border:1px solid #18b15a;
+
+    border-radius:12px;
+
+    padding:32px;
+}
+
+
+.conclusion h2{
+
+    margin-bottom:18px;
+}
+
+
+/* =========================
+   FONTE
+========================= */
+
+.source{
+
+    background:#141414;
+
+    border:1px solid #242424;
+
+    border-radius:12px;
+
+    padding:28px;
+}
+
+
+.source p{
+
+    font-size:15px;
+
+    color:#aaa;
+
+    margin-bottom:15px;
+}
+
+
+.source a{
+
+    display:inline-block;
+
+    color:#18b15a;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:bold;
+}
+
+
+.source a:hover{
+
+    color:#fff;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer{
+
+    text-align:center;
+
+    padding:30px;
+
+    border-top:1px solid #222;
+
+    color:#777;
+
+    font-size:13px;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media(max-width:800px){
+
+    nav{
+
+        flex-direction:column;
+
+        gap:15px;
+    }
+
+
+    nav ul{
+
+        gap:15px;
+    }
+
+
+    main{
+
+        padding-top:60px;
+    }
+
+
+    h1{
+
+        font-size:40px;
+    }
+
+
+    .section h2{
+
+        font-size:26px;
+    }
+
+
+    .study-info{
+
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVEGAÇÃO
+========================= -->
+
+<nav>
+
+    <div class="logo">
+
+        METODOLOGIA
+        <span>MKS</span>
+
+    </div>
+
+
+    <ul>
+
+        <li>
+            <a href="biblioteca.html">
+                Biblioteca
+            </a>
+        </li>
+
+
+        <li>
+            <a href="consultoria.html">
+                Consultoria
+            </a>
+        </li>
+
+
+        <li>
+            <a href="industries.html">
+                Industries
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+
+<!-- =========================
+     CONTEÚDO PRINCIPAL
+========================= -->
+
+<main>
+
+
+    <div class="tag">
+
+        04 / VOLUME DE TREINO
+
+    </div>
+
+
+    <a
+    href="volume.html"
+    class="back"
+    >
+
+        ← Voltar para Volume de Treino
+
+    </a>
+
+
+
+    <!-- =========================
+         TÍTULO
+    ========================= -->
+
+    <h1>
+
+        O que realmente conta como volume?
+
+    </h1>
+
+
+    <p class="subtitle">
+
+        Uma análise sobre como o número de séries,
+        repetições e carga podem ser utilizados
+        para quantificar o volume de treinamento
+        no contexto da hipertrofia.
+
+    </p>
+
+
+    <div class="study-type">
+
+        REVISÃO SISTEMÁTICA • 2021
+
+    </div>
+
+
+
+    <!-- =========================
+         PERGUNTA
+    ========================= -->
+
+    <section class="section">
+
+        <div class="section-label">
+
+            PERGUNTA INVESTIGADA
+
+        </div>
+
+
+        <h2>
+
+            Podemos medir o volume de treinamento
+            simplesmente contando séries?
+
+        </h2>
+
+
+        <p>
+
+            Quando falamos em volume de treinamento,
+            existem diferentes maneiras de quantificar
+            o trabalho realizado.
+
+        </p>
+
+
+        <p>
+
+            Podemos considerar o número de séries,
+            o número de repetições, a carga utilizada
+            ou até mesmo o volume de carga total.
+
+        </p>
+
+
+        <p>
+
+            Mas qual dessas medidas realmente faz
+            sentido quando o objetivo é analisar
+            hipertrofia muscular?
+
+        </p>
+
+
+        <div class="highlight">
+
+            <p>
+
+                <strong>
+
+                    A revisão investigou se o número
+                    total de séries pode ser utilizado
+                    como uma medida adequada de volume
+                    no treinamento voltado para hipertrofia.
+
+                </strong>
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         RESPOSTA RÁPIDA
+    ========================= -->
+
+    <div class="quick-answer">
+
+        <h2>
+
+            Resposta rápida
+
+        </h2>
+
+
+        <p>
+
+            Sim. A revisão concluiu que o número
+            total de séries realizadas até a falha
+            ou próximo dela parece ser uma maneira
+            adequada de quantificar o volume de
+            treinamento para hipertrofia.
+
+        </p>
+
+
+        <p>
+
+            Essa conclusão é especialmente aplicável
+            quando a faixa de repetições está entre
+            aproximadamente 6 e 20 ou mais e as
+            demais variáveis do treinamento permanecem
+            relativamente constantes.
+
+        </p>
+
+
+        <p>
+
+            Porém, isso não significa que uma série
+            tenha exatamente o mesmo estímulo em
+            qualquer situação.
+
+        </p>
+
+    </div>
+
+
+
+    <!-- =========================
+         FICHA TÉCNICA
+    ========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            SOBRE O ESTUDO
+
+        </div>
+
+
+        <h2>
+
+            Ficha técnica
+
+        </h2>
+
+
+        <div class="study-info">
+
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    AUTORES
+
+                </div>
+
+                <div class="info-value">
+
+                    Eneko Baz-Valle,
+                    Maelán Fontes-Villalba e
+                    Jordan Santos-Concejero
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    ANO
+
+                </div>
+
+                <div class="info-value">
+
+                    2021
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    TIPO DE ESTUDO
+
+                </div>
+
+                <div class="info-value">
+
+                    Revisão sistemática
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    ESTUDOS INCLUÍDOS
+
+                </div>
+
+                <div class="info-value">
+
+                    14 estudos
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    BASES DE DADOS
+
+                </div>
+
+                <div class="info-value">
+
+                    PubMed e Scopus
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    PARTICIPANTES
+
+                </div>
+
+                <div class="info-value">
+
+                    Adultos jovens com
+                    experiência em treinamento
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    EXPERIÊNCIA MÍNIMA
+
+                </div>
+
+                <div class="info-value">
+
+                    Pelo menos 1 ano de
+                    treinamento resistido
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    DESFECHO
+
+                </div>
+
+                <div class="info-value">
+
+                    Alterações morfológicas
+                    relacionadas à hipertrofia
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         METODOLOGIA
+    ========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            METODOLOGIA
+
+        </div>
+
+
+        <h2>
+
+            Como a revisão foi realizada?
+
+        </h2>
+
+
+        <p>
+
+            Os pesquisadores realizaram uma busca
+            nas bases PubMed e Scopus para identificar
+            estudos que comparassem diferentes
+            formas de quantificar o volume de
+            treinamento.
+
+        </p>
+
+
+        <p>
+
+            Inicialmente foram encontrados
+            2.585 artigos.
+
+        </p>
+
+
+        <p>
+
+            Após a aplicação dos critérios de inclusão
+            e exclusão, 14 estudos foram considerados
+            adequados para a revisão.
+
+        </p>
+
+
+        <p>
+
+            Para serem incluídos, os estudos precisavam,
+            entre outros critérios, ser ensaios
+            controlados, ter pelo menos seis semanas
+            de duração e envolver indivíduos com
+            pelo menos um ano de experiência em
+            treinamento resistido.
+
+        </p>
+
+
+        <div class="highlight">
+
+            <p>
+
+                <strong>
+
+                    Isso é importante:
+
+                </strong>
+
+                a revisão não foi construída
+                principalmente com iniciantes.
+                Os participantes precisavam ter
+                experiência prévia com treinamento
+                resistido.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         O QUE É VOLUME?
+    ========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            CONCEITO
+
+        </div>
+
+
+        <h2>
+
+            Afinal, o que significa "volume"?
+
+        </h2>
+
+
+        <p>
+
+            Na literatura de treinamento resistido,
+            volume pode ser representado de diversas
+            maneiras.
+
+        </p>
+
+
+        <ul class="analysis-list">
+
+            <li>
+
+                Número total de séries.
+
+            </li>
+
+
+            <li>
+
+                Número total de repetições.
+
+            </li>
+
+
+            <li>
+
+                Volume de carga, calculado a partir
+                de séries × repetições × carga.
+
+            </li>
+
+        </ul>
+
+
+        <p>
+
+            O problema é que essas medidas não
+            necessariamente representam a mesma
+            coisa do ponto de vista do estímulo
+            produzido pelo treinamento.
+
+        </p>
+
+
+        <p>
+
+            Por exemplo, aumentar a carga e diminuir
+            as repetições pode alterar o volume de
+            carga total sem necessariamente representar
+            uma mudança proporcional no estímulo
+            hipertrófico.
+
+        </p>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         RESULTADOS
+    ========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            RESULTADOS
+
+        </div>
+
+
+        <h2>
+
+            O que os pesquisadores encontraram?
+
+        </h2>
+
+
+        <p>
+
+            A revisão indicou que o número total de
+            séries realizadas até a falha ou próximo
+            dela parece ser uma medida adequada para
+            quantificar o volume no contexto da
+            hipertrofia.
+
+        </p>
+
+
+        <p>
+
+            Essa conclusão se mostrou aplicável
+            quando os estudos utilizavam faixas de
+            aproximadamente 6 a 20 ou mais repetições
+            e mantinham as demais variáveis relativamente
+            constantes.
+
+        </p>
+
+
+        <div class="highlight">
+
+            <p>
+
+                <strong>
+
+                    Em termos práticos:
+
+                </strong>
+
+                quando o objetivo é comparar
+                diferentes quantidades de treinamento,
+                contar séries pode ser uma maneira
+                simples e útil de representar o volume.
+
+            </p>
+
+        </div>
+
+
+        <p>
+
+            Isso ajuda a explicar por que grande parte
+            da literatura moderna sobre hipertrofia
+            utiliza o número de séries semanais como
+            uma das principais formas de quantificar
+            volume.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         POR QUE SÉRIES?
+    ========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            INTERPRETAÇÃO
+
+        </div>
+
+
+        <h2>
+
+            Por que contar séries pode ser útil?
+
+        </h2>
+
+
+        <p>
+
+            Uma das vantagens de utilizar o número
+            de séries é a simplicidade.
+
+        </p>
+
+
+        <p>
+
+            Imagine dois programas que utilizam
+            exercícios diferentes e cargas diferentes.
+
+            Comparar simplesmente o peso levantado
+            pode ser bastante complicado.
+
+        </p>
+
+
+        <p>
+
+            Já o número de séries oferece uma medida
+            relativamente simples para acompanhar
+            quanto trabalho específico está sendo
+            direcionado a determinado grupo muscular.
+
+        </p>
+
+
+        <div class="highlight">
+
+            <p>
+
+                <strong>
+
+                    Por isso, "10 séries semanais"
+                    pode ser uma informação mais
+                    prática para prescrição do que
+                    simplesmente "X quilos de volume".
+
+                </strong>
+
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         O QUE NÃO SIGNIFICA
+    ========================= -->
+
+    <section class="section not-mean">
+
+
+        <div class="section-label">
+
+            O QUE ESTE ESTUDO NÃO SIGNIFICA
+
+        </div>
+
+
+        <h2>
+
+            O que não podemos concluir?
+
+        </h2>
+
+
+        <ul class="analysis-list">
+
+            <li>
+
+                Não significa que todas as séries
+                tenham exatamente o mesmo estímulo.
+
+            </li>
+
+
+            <li>
+
+                Não significa que a carga utilizada
+                seja irrelevante.
+
+            </li>
+
+
+            <li>
+
+                Não significa que repetições,
+                intensidade ou proximidade da falha
+                não importem.
+
+            </li>
+
+
+            <li>
+
+                Não significa que "10 séries" tenham
+                o mesmo efeito independentemente
+                da execução e do esforço.
+
+            </li>
+
+
+            <li>
+
+                Não significa que contar séries
+                determine sozinho a hipertrofia.
+
+            </li>
+
+        </ul>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         LIMITAÇÕES
+    ========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            LIMITAÇÕES
+
+        </div>
+
+
+        <h2>
+
+            Onde devemos ter cuidado?
+
+        </h2>
+
+
+        <p>
+
+            A revisão apresenta uma conclusão
+            importante, mas os próprios autores
+            indicam que ainda são necessários
+            estudos para determinar se números
+            específicos de séries são capazes de
+            produzir ganhos musculares ótimos.
+
+        </p>
+
+
+        <ul class="analysis-list">
+
+            <li>
+
+                A revisão incluiu apenas 14 estudos.
+
+            </li>
+
+
+            <li>
+
+                Os participantes precisavam ter
+                experiência prévia com treinamento,
+                portanto os resultados não devem ser
+                automaticamente generalizados para
+                iniciantes.
+
+            </li>
+
+
+            <li>
+
+                Os estudos apresentavam diferentes
+                protocolos de treinamento.
+
+            </li>
+
+
+            <li>
+
+                A quantidade de séries é apenas uma
+                parte da prescrição do treinamento.
+
+            </li>
+
+
+            <li>
+
+                Ainda não é possível determinar um
+                número universal de séries que maximize
+                a hipertrofia para todas as pessoas.
+
+            </li>
+
+        </ul>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         ANÁLISE MIKADESH
+    ========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            ANÁLISE MIKADESH
+
+        </div>
+
+
+        <div class="analysis">
+
+
+            <h2>
+
+                Como interpretar este estudo?
+
+            </h2>
+
+
+            <p>
+
+                Este estudo é importante porque ajuda
+                a esclarecer uma questão básica que
+                aparece constantemente quando falamos
+                sobre volume.
+
+            </p>
+
+
+            <p>
+
+                Se estamos tentando estudar a relação
+                entre volume e hipertrofia, precisamos
+                primeiro de uma maneira razoavelmente
+                consistente de medir esse volume.
+
+            </p>
+
+
+            <p>
+
+                A revisão mostra que contar séries
+                próximas da falha é uma ferramenta
+                bastante útil para isso.
+
+            </p>
+
+
+            <p>
+
+                Isso não significa que uma série seja
+                uma unidade perfeita de estímulo.
+                Uma série de agachamento, uma série
+                de extensão de joelho e uma série
+                realizada muito distante da falha
+                não são necessariamente equivalentes
+                em todos os aspectos.
+
+            </p>
+
+
+            <p>
+
+                Ainda assim, quando outras variáveis
+                são relativamente controladas, o
+                número de séries fornece uma maneira
+                simples e prática de acompanhar o
+                volume direcionado ao músculo.
+
+            </p>
+
+
+            <p>
+
+                Isso também ajuda a entender por que
+                a literatura sobre hipertrofia costuma
+                discutir volume em termos de
+                "séries semanais por grupo muscular".
+
+            </p>
+
+
+            <p>
+
+                Portanto, o número de séries não deve
+                ser visto como uma medida perfeita
+                do estímulo, mas como uma ferramenta
+                prática de quantificação do treinamento.
+
+            </p>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         CONCLUSÃO
+    ========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            CONCLUSÃO
+
+        </div>
+
+
+        <div class="conclusion">
+
+
+            <h2>
+
+                Conclusão da Biblioteca Científica
+
+            </h2>
+
+
+            <p>
+
+                A revisão sistemática indica que
+                contabilizar o número total de séries
+                realizadas até a falha ou próximo dela
+                é uma maneira adequada de quantificar
+                o volume de treinamento no contexto
+                da hipertrofia.
+
+            </p>
+
+
+            <p>
+
+                Essa abordagem parece especialmente
+                útil quando o treinamento utiliza
+                aproximadamente 6 a 20 ou mais
+                repetições e as demais variáveis são
+                mantidas relativamente constantes.
+
+            </p>
+
+
+            <p>
+
+                Porém, contar séries não significa
+                ignorar carga, repetições, esforço,
+                execução ou recuperação.
+
+            </p>
+
+
+            <p>
+
+                O número de séries deve ser entendido
+                como uma ferramenta prática para
+                quantificar volume, e não como uma
+                medida perfeita ou isolada do estímulo
+                hipertrófico.
+
+            </p>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         FONTE ORIGINAL
+    ========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            FONTE ORIGINAL
+
+        </div>
+
+
+        <div class="source">
+
+
+            <p>
+
+                Baz-Valle E.,
+                Fontes-Villalba M. e
+                Santos-Concejero J.
+
+            </p>
+
+
+            <p>
+
+                <strong>
+
+                    Total Number of Sets as a
+                    Training Volume Quantification
+                    Method for Muscle Hypertrophy:
+                    A Systematic Review.
+
+                </strong>
+
+            </p>
+
+
+            <p>
+
+                Journal of Strength and
+                Conditioning Research.
+                2021;35(3):870–878.
+
+            </p>
+
+
+            <a
+            href="https://pubmed.ncbi.nlm.nih.gov/30063555/"
+            target="_blank"
+            >
+
+                → Ver estudo original no PubMed
+
+            </a>
+
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================
+     RODAPÉ
+========================= -->
+
+<footer>
+
+    © 2026 Metodologia MKS
+
+</footer>
+
+
+</body>
+
+</html>
