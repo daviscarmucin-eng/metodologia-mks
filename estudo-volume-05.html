@@ -1,368 +1,467 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 
 <head>
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
 
-<title>16, 24 ou 32 séries? — Biblioteca Científica</title>
+<title>
+16, 24 ou 32 séries? — Biblioteca Científica
+</title>
+
 
 <style>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-
-    background: #0b0d0c;
-    color: #e8e8e8;
-
-    font-family: Arial, Helvetica, sans-serif;
-
-    line-height: 1.7;
-
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#0b0b0b;
+    color:#fff;
+    line-height:1.7;
 }
 
-nav {
 
-    width: 100%;
+/* =========================
+   NAVEGAÇÃO
+========================= */
 
-    padding: 22px 40px;
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 
-    border-bottom: 1px solid #1d211f;
+    padding:18px 6%;
 
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
+    background:#0b0b0b;
+    border-bottom:1px solid #222;
 }
 
-.logo {
-
-    font-size: 18px;
-
-    font-weight: 700;
-
-    letter-spacing: 1px;
-
+.logo{
+    font-size:20px;
+    font-weight:bold;
 }
 
-.logo span {
-
-    color: #18b15a;
-
+.logo span{
+    color:#18b15a;
 }
 
-.nav-links {
-
-    display: flex;
-
-    gap: 28px;
-
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
 }
 
-.nav-links a {
-
-    color: #aaa;
-
-    text-decoration: none;
-
-    font-size: 14px;
-
-    transition: 0.2s;
-
+nav a{
+    color:#ccc;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:bold;
+    transition:.3s;
 }
 
-.nav-links a:hover {
-
-    color: #18b15a;
-
+nav a:hover{
+    color:#18b15a;
 }
 
-main {
 
-    max-width: 1000px;
+/* =========================
+   CONTEÚDO PRINCIPAL
+========================= */
 
-    margin: auto;
-
-    padding: 80px 20px 100px;
-
+main{
+    max-width:1000px;
+    margin:auto;
+    padding:80px 20px 100px;
 }
 
-.back {
 
-    display: inline-block;
-
-    margin-bottom: 35px;
-
-    color: #18b15a;
-
-    text-decoration: none;
-
-    font-size: 14px;
-
+.tag{
+    color:#18b15a;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:3px;
+    margin-bottom:15px;
 }
 
-.tag {
 
-    color: #18b15a;
+.back{
+    display:inline-block;
+    margin-bottom:35px;
 
-    font-size: 13px;
+    color:#888;
+    text-decoration:none;
 
-    font-weight: 700;
+    font-size:14px;
 
-    letter-spacing: 1.5px;
-
-    margin-bottom: 18px;
-
+    transition:.3s;
 }
 
-h1 {
-
-    font-size: 46px;
-
-    line-height: 1.15;
-
-    margin-bottom: 20px;
-
-    color: #ffffff;
-
+.back:hover{
+    color:#18b15a;
 }
 
-.subtitle {
 
-    max-width: 760px;
-
-    color: #aaa;
-
-    font-size: 18px;
-
-    margin-bottom: 25px;
-
+h1{
+    font-size:54px;
+    line-height:1.1;
+    max-width:850px;
+    margin-bottom:20px;
 }
 
-.study-type {
 
-    display: inline-block;
-
-    border: 1px solid #26302b;
-
-    color: #18b15a;
-
-    padding: 8px 14px;
-
-    font-size: 12px;
-
-    letter-spacing: 1px;
-
-    margin-bottom: 60px;
-
+.subtitle{
+    color:#aaa;
+    font-size:18px;
+    max-width:760px;
+    margin-bottom:25px;
 }
 
-section {
 
-    margin-bottom: 55px;
+.study-type{
+    color:#18b15a;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:1px;
 
+    margin-bottom:55px;
 }
 
-h2 {
 
-    font-size: 24px;
+/* =========================
+   SEÇÕES
+========================= */
 
-    color: #ffffff;
-
-    margin-bottom: 20px;
-
+.section{
+    margin-bottom:65px;
 }
 
-h3 {
 
-    font-size: 18px;
+.section-label{
+    color:#18b15a;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:2px;
 
-    color: #ffffff;
-
-    margin: 25px 0 12px;
-
+    margin-bottom:12px;
 }
 
-p {
 
-    color: #b8b8b8;
-
-    margin-bottom: 16px;
-
+.section h2{
+    font-size:30px;
+    margin-bottom:20px;
 }
 
-.highlight {
 
-    background: #111512;
-
-    border-left: 3px solid #18b15a;
-
-    padding: 25px;
-
-    margin-top: 20px;
-
+.section p{
+    color:#b5b5b5;
+    font-size:17px;
+    margin-bottom:18px;
 }
 
-.highlight p {
 
-    color: #d7d7d7;
+/* =========================
+   RESPOSTA RÁPIDA
+========================= */
 
-    margin: 0;
+.quick-answer{
+    background:#141414;
 
+    border:1px solid #242424;
+
+    border-left:3px solid #18b15a;
+
+    border-radius:10px;
+
+    padding:28px;
+
+    margin-bottom:65px;
 }
 
-.info-box {
 
-    background: #101311;
-
-    border: 1px solid #1d211f;
-
-    padding: 25px;
-
+.quick-answer h2{
+    font-size:23px;
+    margin-bottom:12px;
 }
 
-.info-row {
 
-    display: flex;
-
-    justify-content: space-between;
-
-    gap: 20px;
-
-    padding: 10px 0;
-
-    border-bottom: 1px solid #1d211f;
-
+.quick-answer p{
+    color:#d0d0d0;
+    font-size:17px;
 }
 
-.info-row:last-child {
 
-    border-bottom: none;
+/* =========================
+   FICHA TÉCNICA
+========================= */
 
+.study-info{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:12px;
+
+    margin-top:25px;
 }
 
-.info-label {
 
-    color: #777;
+.info-box{
 
+    background:#141414;
+
+    border:1px solid #242424;
+
+    border-radius:10px;
+
+    padding:20px;
 }
 
-.info-value {
 
-    color: #ddd;
+.info-label{
 
-    text-align: right;
+    color:#18b15a;
 
+    font-size:12px;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+    margin-bottom:7px;
 }
 
-ul {
 
-    margin-left: 22px;
+.info-value{
 
-    color: #b8b8b8;
+    color:#d0d0d0;
 
+    font-size:15px;
 }
 
-li {
 
-    margin-bottom: 10px;
+/* =========================
+   LISTAS
+========================= */
 
+.analysis-list{
+
+    margin-top:20px;
+
+    padding-left:20px;
 }
 
-.source {
 
-    background: #101311;
+.analysis-list li{
 
-    border: 1px solid #1d211f;
+    color:#b5b5b5;
 
-    padding: 25px;
+    font-size:17px;
 
+    margin-bottom:12px;
 }
 
-.source a {
 
-    color: #18b15a;
+/* =========================
+   DESTAQUE
+========================= */
 
-    text-decoration: none;
+.highlight{
 
-    word-break: break-word;
+    background:#141414;
 
+    border:1px solid #242424;
+
+    border-radius:10px;
+
+    padding:28px;
+
+    margin-top:25px;
 }
 
-footer {
 
-    border-top: 1px solid #1d211f;
+.highlight strong{
 
-    padding: 30px 20px;
-
-    text-align: center;
-
-    color: #555;
-
-    font-size: 13px;
-
+    color:#18b15a;
 }
 
-@media (max-width: 700px) {
 
-    nav {
+/* =========================
+   INTERPRETAÇÃO
+========================= */
 
-        padding: 20px;
+.not-mean{
 
+    border-left:3px solid #555;
+
+    padding-left:22px;
+}
+
+
+/* =========================
+   ANÁLISE MIKADESH
+========================= */
+
+.analysis{
+
+    background:#111;
+
+    border:1px solid #242424;
+
+    border-radius:12px;
+
+    padding:32px;
+}
+
+
+.analysis h2{
+
+    margin-bottom:18px;
+}
+
+
+/* =========================
+   CONCLUSÃO
+========================= */
+
+.conclusion{
+
+    background:#141414;
+
+    border:1px solid #18b15a;
+
+    border-radius:12px;
+
+    padding:32px;
+}
+
+
+.conclusion h2{
+
+    margin-bottom:18px;
+}
+
+
+/* =========================
+   FONTE
+========================= */
+
+.source{
+
+    background:#141414;
+
+    border:1px solid #242424;
+
+    border-radius:12px;
+
+    padding:28px;
+}
+
+
+.source p{
+
+    font-size:15px;
+
+    color:#aaa;
+
+    margin-bottom:15px;
+}
+
+
+.source a{
+
+    display:inline-block;
+
+    color:#18b15a;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:bold;
+}
+
+
+.source a:hover{
+
+    color:#fff;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer{
+
+    text-align:center;
+
+    padding:30px;
+
+    border-top:1px solid #222;
+
+    color:#777;
+
+    font-size:13px;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media(max-width:800px){
+
+    nav{
+
+        flex-direction:column;
+
+        gap:15px;
     }
 
-    .nav-links {
 
-        gap: 14px;
+    nav ul{
 
+        gap:15px;
     }
 
-    .nav-links a {
 
-        font-size: 12px;
+    main{
 
+        padding-top:60px;
     }
 
-    main {
 
-        padding: 55px 20px 80px;
+    h1{
 
+        font-size:40px;
     }
 
-    h1 {
 
-        font-size: 36px;
+    .section h2{
 
+        font-size:26px;
     }
 
-    .subtitle {
 
-        font-size: 16px;
+    .study-info{
 
-    }
-
-    .info-row {
-
-        flex-direction: column;
-
-        gap: 4px;
-
-    }
-
-    .info-value {
-
-        text-align: left;
-
+        grid-template-columns:1fr;
     }
 
 }
@@ -371,667 +470,1168 @@ footer {
 
 </head>
 
+
 <body>
 
+
+<!-- =========================
+     NAVEGAÇÃO
+========================= -->
 
 <nav>
 
     <div class="logo">
 
-        METODOLOGIA <span>MKS</span>
+        METODOLOGIA
+        <span>MKS</span>
 
     </div>
 
-    <div class="nav-links">
 
-        <a href="biblioteca.html">Biblioteca</a>
+    <ul>
 
-        <a href="consultoria.html">Consultoria</a>
+        <li>
+            <a href="biblioteca.html">
+                Biblioteca
+            </a>
+        </li>
 
-        <a href="industries.html">Industries</a>
 
-    </div>
+        <li>
+            <a href="consultoria.html">
+                Consultoria
+            </a>
+        </li>
+
+
+        <li>
+            <a href="industries.html">
+                Industries
+            </a>
+        </li>
+
+    </ul>
 
 </nav>
 
 
+
+<!-- =========================
+     CONTEÚDO PRINCIPAL
+========================= -->
+
 <main>
 
 
-<a href="volume.html" class="back">
+    <div class="tag">
 
-    ← Voltar para Volume de Treino
+        05 / VOLUME DE TREINO
 
-</a>
-
-
-<div class="tag">
-
-    05 / VOLUME DE TREINO
-
-</div>
+    </div>
 
 
-<h1>
+    <a
+    href="volume.html"
+    class="back"
+    >
 
-    16, 24 ou 32 séries?
+        ← Voltar para Volume de Treino
 
-</h1>
-
-
-<p class="subtitle">
-
-    Um ensaio clínico comparando diferentes volumes semanais de treinamento e seus efeitos sobre a hipertrofia e a força em homens treinados.
-
-</p>
+    </a>
 
 
-<div class="study-type">
 
-    ENSAIO CLÍNICO • 2022
+    <!-- =========================
+         TÍTULO
+    ========================= -->
 
-</div>
+    <h1>
+
+        16, 24 ou 32 séries?
+
+    </h1>
 
 
-<section>
+    <p class="subtitle">
 
-    <h2>
-
-        PERGUNTA INVESTIGADA
-
-    </h2>
-
-    <p>
-
-        Aumentar o número de séries semanais de 16 para 24 ou 32 séries por grupo muscular realmente produz mais hipertrofia em indivíduos já treinados?
+        Uma análise sobre os efeitos de diferentes
+        volumes semanais de treinamento sobre a
+        hipertrofia e a força em homens treinados.
 
     </p>
 
-</section>
+
+    <div class="study-type">
+
+        ENSAIO CLÍNICO • 2022
+
+    </div>
 
 
-<section>
 
-    <h2>
+    <!-- =========================
+         PERGUNTA
+    ========================= -->
 
-        Resposta rápida
+    <section class="section">
 
-    </h2>
+        <div class="section-label">
 
-    <div class="highlight">
+            PERGUNTA INVESTIGADA
+
+        </div>
+
+
+        <h2>
+
+            Mais séries realmente produzem
+            mais hipertrofia em indivíduos treinados?
+
+        </h2>
+
 
         <p>
 
-            Sim, aumentar o volume pode produzir benefícios adicionais em algumas medidas de hipertrofia, mesmo em indivíduos treinados. Neste estudo, todos os grupos aumentaram a espessura muscular, mas o grupo que realizou 32 séries semanais apresentou maiores aumentos do que o grupo de 16 séries em algumas regiões, especialmente no membro inferior e no tríceps.
+            Sabemos que aumentar o volume de treinamento
+            pode favorecer a hipertrofia. Mas existe
+            uma questão mais específica:
+
+        </p>
+
+
+        <p>
+
+            quando uma pessoa já possui experiência
+            com treinamento resistido, aumentar o número
+            de séries de 16 para 24 ou 32 por semana
+            continua produzindo ganhos adicionais?
+
+        </p>
+
+
+        <p>
+
+            Este ensaio clínico comparou diretamente
+            essas três quantidades de volume para
+            investigar justamente essa questão.
+
+        </p>
+
+
+        <div class="highlight">
+
+            <p>
+
+                <strong>
+
+                    A principal pergunta foi:
+
+                </strong>
+
+                volumes de 16, 24 e 32 séries semanais
+                produzem respostas diferentes de
+                hipertrofia em homens treinados?
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         RESPOSTA RÁPIDA
+    ========================= -->
+
+    <div class="quick-answer">
+
+        <h2>
+
+            Resposta rápida
+
+        </h2>
+
+
+        <p>
+
+            Todos os grupos apresentaram aumentos
+            de força e de espessura muscular após
+            oito semanas.
+
+        </p>
+
+
+        <p>
+
+            O grupo que realizou 32 séries semanais
+            apresentou maiores aumentos em algumas
+            medidas de espessura muscular quando
+            comparado ao grupo de 16 séries,
+            especialmente em medidas do membro
+            inferior e do tríceps.
+
+        </p>
+
+
+        <p>
+
+            Porém, isso não significa que 32 séries
+            sejam necessariamente superiores para
+            todos os músculos ou para todas as pessoas.
 
         </p>
 
     </div>
 
-</section>
 
 
-<section>
+    <!-- =========================
+         FICHA TÉCNICA
+    ========================= -->
 
-    <h2>
+    <section class="section">
 
-        SOBRE O ESTUDO
 
-    </h2>
+        <div class="section-label">
 
-    <div class="info-box">
-
-        <div class="info-row">
-
-            <span class="info-label">
-
-                Autores
-
-            </span>
-
-            <span class="info-value">
-
-                Felipe A. Brigatto et al.
-
-            </span>
+            SOBRE O ESTUDO
 
         </div>
 
 
-        <div class="info-row">
+        <h2>
 
-            <span class="info-label">
+            Ficha técnica
 
-                Publicação
+        </h2>
 
-            </span>
 
-            <span class="info-value">
+        <div class="study-info">
 
-                Journal of Strength and Conditioning Research
 
-            </span>
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    AUTORES
+
+                </div>
+
+                <div class="info-value">
+
+                    Felipe A. Brigatto,
+                    Lucas E. de M. Lima,
+                    Marcelo D. Germano,
+                    Marcelo S. Aoki,
+                    Tiago V. Braz e
+                    Carlos R. Lopes
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    ANO
+
+                </div>
+
+                <div class="info-value">
+
+                    2022
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    TIPO DE ESTUDO
+
+                </div>
+
+                <div class="info-value">
+
+                    Ensaio clínico randomizado
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    DURAÇÃO
+
+                </div>
+
+                <div class="info-value">
+
+                    8 semanas
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    PARTICIPANTES
+
+                </div>
+
+                <div class="info-value">
+
+                    Homens treinados em
+                    treinamento resistido
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    GRUPOS
+
+                </div>
+
+                <div class="info-value">
+
+                    16, 24 e 32 séries
+                    semanais
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    DESFECHOS
+
+                </div>
+
+                <div class="info-value">
+
+                    Espessura muscular e
+                    força
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-box">
+
+                <div class="info-label">
+
+                    PMID
+
+                </div>
+
+                <div class="info-value">
+
+                    31868813
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         METODOLOGIA
+    ========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            METODOLOGIA
 
         </div>
 
 
-        <div class="info-row">
+        <h2>
 
-            <span class="info-label">
+            Como o estudo foi realizado?
 
-                Ano
+        </h2>
 
-            </span>
-
-            <span class="info-value">
-
-                2022
-
-            </span>
-
-        </div>
-
-
-        <div class="info-row">
-
-            <span class="info-label">
-
-                Duração
-
-            </span>
-
-            <span class="info-value">
-
-                8 semanas
-
-            </span>
-
-        </div>
-
-
-        <div class="info-row">
-
-            <span class="info-label">
-
-                Participantes
-
-            </span>
-
-            <span class="info-value">
-
-                27 homens treinados
-
-            </span>
-
-        </div>
-
-
-        <div class="info-row">
-
-            <span class="info-label">
-
-                Grupos
-
-            </span>
-
-            <span class="info-value">
-
-                16, 24 e 32 séries semanais
-
-            </span>
-
-        </div>
-
-
-        <div class="info-row">
-
-            <span class="info-label">
-
-                PMID
-
-            </span>
-
-            <span class="info-value">
-
-                31868813
-
-            </span>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section>
-
-    <h2>
-
-        METODOLOGIA
-
-    </h2>
-
-    <p>
-
-        Os pesquisadores selecionaram homens com experiência prévia em treinamento resistido e os dividiram aleatoriamente em três grupos.
-
-    </p>
-
-    <p>
-
-        Cada grupo realizou uma quantidade diferente de séries semanais para cada grupo muscular:
-
-    </p>
-
-    <ul>
-
-        <li>
-
-            <strong>G16:</strong> 16 séries semanais por grupo muscular.
-
-        </li>
-
-        <li>
-
-            <strong>G24:</strong> 24 séries semanais por grupo muscular.
-
-        </li>
-
-        <li>
-
-            <strong>G32:</strong> 32 séries semanais por grupo muscular.
-
-        </li>
-
-    </ul>
-
-    <p>
-
-        O ponto importante é que os pesquisadores mantiveram constantes outras variáveis do treinamento, incluindo exercícios, ordem dos exercícios, frequência semanal, faixa de repetições e intervalos de descanso.
-
-    </p>
-
-    <p>
-
-        Dessa forma, a principal diferença entre os grupos foi justamente o número de séries realizadas.
-
-    </p>
-
-</section>
-
-
-<section>
-
-    <h2>
-
-        RESULTADOS
-
-    </h2>
-
-    <p>
-
-        Após oito semanas, todos os três grupos apresentaram aumento significativo da força nos testes de supino e agachamento.
-
-    </p>
-
-    <p>
-
-        Também houve aumento da espessura muscular do bíceps braquial, tríceps braquial e vasto lateral em todos os grupos.
-
-    </p>
-
-    <h3>
-
-        E quando os volumes foram comparados?
-
-    </h3>
-
-    <p>
-
-        O resultado mais interessante apareceu quando o grupo de 32 séries foi comparado ao grupo de 16 séries.
-
-    </p>
-
-    <p>
-
-        O grupo de 32 séries apresentou maior magnitude de aumento da espessura muscular do membro inferior em comparação ao grupo de 16 séries.
-
-    </p>
-
-    <p>
-
-        Além disso, o aumento da espessura do tríceps braquial também foi maior no grupo de 32 séries quando comparado ao grupo de 16 séries.
-
-    </p>
-
-    <p>
-
-        Portanto, o estudo fornece evidência de que volumes bastante altos podem gerar adaptações adicionais em indivíduos treinados, embora essas diferenças não tenham aparecido de forma igual em todos os músculos analisados.
-
-    </p>
-
-</section>
-
-
-<section>
-
-    <h2>
-
-        O QUE ESTE ESTUDO MOSTRA SOBRE O VOLUME?
-
-    </h2>
-
-    <p>
-
-        Este estudo é particularmente interessante porque não compara simplesmente pessoas que treinam contra pessoas que não treinam.
-
-    </p>
-
-    <p>
-
-        Todos os participantes já realizavam treinamento resistido. A comparação foi feita entre diferentes doses de treinamento.
-
-    </p>
-
-    <p>
-
-        Isso permite observar uma questão mais prática:
-
-    </p>
-
-    <div class="highlight">
 
         <p>
 
-            Se 16 séries já são suficientes para gerar hipertrofia, aumentar para 24 ou 32 pode ainda produzir algum benefício adicional?
+            Os pesquisadores selecionaram homens
+            com experiência prévia em treinamento
+            resistido e distribuíram os participantes
+            em três grupos de treinamento.
 
         </p>
 
-    </div>
-
-    <p>
-
-        Neste estudo, a resposta foi: <strong>em algumas medidas, sim.</strong>
-
-    </p>
-
-    <p>
-
-        Porém, isso não significa que 32 séries sejam automaticamente melhores para qualquer pessoa ou qualquer músculo.
-
-    </p>
-
-</section>
-
-
-<section>
-
-    <h2>
-
-        32 SÉRIES SÃO MELHORES PARA TODO MUNDO?
-
-    </h2>
-
-    <p>
-
-        Não.
-
-    </p>
-
-    <p>
-
-        O estudo encontrou diferenças entre algumas condições, mas não demonstrou que todos os músculos responderão melhor a 32 séries semanais.
-
-    </p>
-
-    <p>
-
-        Além disso, o estudo teve apenas oito semanas de duração. Portanto, não podemos simplesmente concluir que manter 32 séries durante muitos meses continuará produzindo vantagens proporcionais.
-
-    </p>
-
-    <p>
-
-        Também é importante considerar que aumentar o volume aumenta simultaneamente a quantidade de trabalho, fadiga e tempo necessário para treinar.
-
-    </p>
-
-</section>
-
-
-<section>
-
-    <h2>
-
-        O QUE ESTE ESTUDO NÃO SIGNIFICA
-
-    </h2>
-
-    <ul>
-
-        <li>
-
-            Não significa que 32 séries semanais sejam necessárias para hipertrofia.
-
-        </li>
-
-        <li>
-
-            Não significa que 24 séries sejam sempre melhores que 16.
-
-        </li>
-
-        <li>
-
-            Não significa que todo músculo precise do mesmo volume.
-
-        </li>
-
-        <li>
-
-            Não significa que aumentar indefinidamente o número de séries continuará aumentando a hipertrofia na mesma proporção.
-
-        </li>
-
-        <li>
-
-            Não significa que alguém que atualmente faz 10 séries precise imediatamente passar para 32.
-
-        </li>
-
-    </ul>
-
-</section>
-
-
-<section>
-
-    <h2>
-
-        LIMITAÇÕES
-
-    </h2>
-
-    <p>
-
-        Apesar de ser um estudo interessante, algumas limitações precisam ser consideradas.
-
-    </p>
-
-    <ul>
-
-        <li>
-
-            A amostra foi pequena, com 27 participantes.
-
-        </li>
-
-        <li>
-
-            Todos os participantes eram homens treinados, portanto os resultados não podem ser generalizados automaticamente para mulheres, iniciantes ou outras populações.
-
-        </li>
-
-        <li>
-
-            A intervenção durou apenas oito semanas.
-
-        </li>
-
-        <li>
-
-            O estudo avaliou algumas regiões musculares específicas, e as respostas não foram idênticas entre elas.
-
-        </li>
-
-        <li>
-
-            O estudo não permite determinar um volume ótimo universal para todos os indivíduos.
-
-        </li>
-
-    </ul>
-
-</section>
-
-
-<section>
-
-    <h2>
-
-        ANÁLISE MIKADESH
-
-    </h2>
-
-    <p>
-
-        Este estudo é especialmente útil quando colocado ao lado das revisões anteriores desta biblioteca.
-
-    </p>
-
-    <p>
-
-        O Estudo 01 mostrou uma relação geral entre maior volume e maiores ganhos de massa muscular. O Estudo 02 mostrou que essa relação apresenta retornos decrescentes. O Estudo 03 mostrou que volumes acima de aproximadamente 20 séries semanais nem sempre produzem vantagens claras sobre volumes moderados.
-
-    </p>
-
-    <p>
-
-        Agora, este ensaio clínico acrescenta outra peça ao quebra-cabeça.
-
-    </p>
-
-    <div class="highlight">
 
         <p>
 
-            Mesmo em indivíduos treinados, aumentar bastante o volume pode produzir ganhos adicionais de hipertrofia em determinadas condições. Porém, a resposta não parece ser uniforme entre todos os músculos e isso não transforma volumes extremamente altos em uma regra geral.
+            A principal diferença entre os grupos
+            foi a quantidade de séries realizadas
+            semanalmente para cada grupo muscular.
 
         </p>
 
-    </div>
 
-    <p>
+        <ul class="analysis-list">
 
-        Portanto, o ponto não é simplesmente buscar o maior número possível de séries.
+            <li>
 
-    </p>
+                <strong>G16:</strong>
+                16 séries semanais.
 
-    <p>
-
-        O objetivo é encontrar uma quantidade de volume que produza estímulo suficiente para continuar progredindo sem transformar o treinamento em uma fonte excessiva de fadiga que prejudique a recuperação e a qualidade das séries.
-
-    </p>
-
-</section>
+            </li>
 
 
-<section>
+            <li>
 
-    <h2>
+                <strong>G24:</strong>
+                24 séries semanais.
 
-        CONCLUSÃO
-
-    </h2>
-
-    <p>
-
-        Neste ensaio clínico, homens treinados realizaram 16, 24 ou 32 séries semanais por grupo muscular durante oito semanas.
-
-    </p>
-
-    <p>
-
-        Todos os volumes foram capazes de aumentar a força e a espessura muscular.
-
-    </p>
-
-    <p>
-
-        Entretanto, o grupo de 32 séries apresentou maiores aumentos em algumas medidas quando comparado ao grupo de 16 séries, principalmente em medidas relacionadas ao membro inferior e ao tríceps.
-
-    </p>
-
-    <p>
-
-        O estudo, portanto, reforça a ideia de que <strong>mais volume pode gerar mais hipertrofia em determinadas situações</strong>, mas também mostra por que não devemos interpretar o volume como uma variável com uma resposta simples e universal.
-
-    </p>
-
-    <p>
-
-        Mais séries podem ajudar. A questão é descobrir <strong>quanto é necessário para cada indivíduo e cada músculo</strong>.
-
-    </p>
-
-</section>
+            </li>
 
 
-<section>
+            <li>
 
-    <h2>
+                <strong>G32:</strong>
+                32 séries semanais.
 
-        FONTE ORIGINAL
+            </li>
 
-    </h2>
+        </ul>
 
-    <div class="source">
 
         <p>
 
-            Brigatto FA, Lima LEdM, Germano MD, Aoki MS, Braz TV, Lopes CR.
-
-            <br><br>
-
-            <strong>
-
-                High Resistance-Training Volume Enhances Muscle Thickness in Resistance-Trained Men.
-
-            </strong>
-
-            <br><br>
-
-            Journal of Strength and Conditioning Research. 2022;36(1):22-30.
+            O treinamento foi realizado durante
+            oito semanas, permitindo comparar as
+            alterações de força e de espessura
+            muscular entre os diferentes volumes.
 
         </p>
 
-        <a
-        href="https://pubmed.ncbi.nlm.nih.gov/31868813/"
-        target="_blank"
-        >
 
-            → Ver estudo no PubMed
+        <div class="highlight">
 
-        </a>
+            <p>
 
-    </div>
+                <strong>
 
-</section>
+                    O ponto central do desenho:
+
+                </strong>
+
+                os pesquisadores manipularam
+                principalmente a quantidade de
+                séries para comparar diferentes
+                doses de volume de treinamento.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         RESULTADOS
+    ========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            RESULTADOS
+
+        </div>
+
+
+        <h2>
+
+            O que aconteceu após oito semanas?
+
+        </h2>
+
+
+        <p>
+
+            Todos os grupos apresentaram aumentos
+            significativos de força nos exercícios
+            avaliados.
+
+        </p>
+
+
+        <p>
+
+            Também foram observados aumentos na
+            espessura muscular das regiões analisadas,
+            incluindo bíceps braquial, tríceps braquial
+            e vasto lateral.
+
+        </p>
+
+
+        <h2>
+
+            E o grupo de 32 séries?
+
+        </h2>
+
+
+        <p>
+
+            Quando os grupos foram comparados,
+            o volume de 32 séries apresentou uma
+            vantagem em algumas medidas específicas
+            de hipertrofia em relação ao grupo de
+            16 séries.
+
+        </p>
+
+
+        <p>
+
+            O grupo de 32 séries apresentou maiores
+            aumentos na espessura muscular do membro
+            inferior quando comparado ao grupo de
+            16 séries.
+
+        </p>
+
+
+        <p>
+
+            Também foi observado maior aumento da
+            espessura do tríceps braquial no grupo
+            de 32 séries em comparação ao grupo
+            de 16 séries.
+
+        </p>
+
+
+        <div class="highlight">
+
+            <p>
+
+                <strong>
+
+                    O resultado mais importante:
+
+                </strong>
+
+                aumentar o volume de 16 para
+                32 séries não produziu uma vantagem
+                uniforme em todos os músculos,
+                mas houve benefícios adicionais
+                em algumas medidas de hipertrofia.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         INTERPRETAÇÃO
+    ========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            INTERPRETAÇÃO
+
+        </div>
+
+
+        <h2>
+
+            O que esse resultado nos ensina?
+
+        </h2>
+
+
+        <p>
+
+            O estudo mostra que indivíduos treinados
+            ainda podem responder positivamente a
+            volumes elevados de treinamento.
+
+        </p>
+
+
+        <p>
+
+            Isso é relevante porque uma das hipóteses
+            possíveis seria imaginar que, depois de
+            determinado ponto, aumentar o número de
+            séries não produziria mais nenhuma
+            adaptação.
+
+        </p>
+
+
+        <p>
+
+            Os resultados não sustentam uma ideia tão
+            simples. Em determinadas condições,
+            aumentar bastante o volume pode produzir
+            ganhos adicionais.
+
+        </p>
+
+
+        <div class="highlight">
+
+            <p>
+
+                <strong>
+
+                    Porém, existe uma diferença
+                    importante entre "mais volume pode
+                    ajudar" e "quanto mais volume,
+                    melhor".
+
+                </strong>
+
+            </p>
+
+        </div>
+
+
+        <p>
+
+            O estudo não demonstrou uma vantagem
+            generalizada de 32 séries sobre todos
+            os outros volumes.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         32 SÉRIES
+    ========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            VOLUME ALTO
+
+        </div>
+
+
+        <h2>
+
+            32 séries são melhores?
+
+        </h2>
+
+
+        <p>
+
+            Não podemos transformar o resultado
+            deste estudo em uma recomendação de
+            32 séries semanais para todos.
+
+        </p>
+
+
+        <p>
+
+            O grupo de maior volume apresentou
+            algumas vantagens, mas essas vantagens
+            foram específicas para determinadas
+            medidas musculares.
+
+        </p>
+
+
+        <p>
+
+            Além disso, o estudo durou apenas oito
+            semanas. Não sabemos, a partir dele,
+            se manter 32 séries durante períodos
+            muito mais longos continuaria produzindo
+            benefícios proporcionais.
+
+        </p>
+
+
+        <p>
+
+            Quanto maior o volume, maior também
+            tende a ser a demanda de recuperação,
+            tempo de treinamento e capacidade de
+            sustentar a qualidade das séries.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         O QUE NÃO SIGNIFICA
+    ========================= -->
+
+    <section class="section not-mean">
+
+
+        <div class="section-label">
+
+            O QUE ESTE ESTUDO NÃO SIGNIFICA
+
+        </div>
+
+
+        <h2>
+
+            O que não podemos concluir?
+
+        </h2>
+
+
+        <ul class="analysis-list">
+
+            <li>
+
+                Não significa que 32 séries sejam
+                necessárias para maximizar a hipertrofia.
+
+            </li>
+
+
+            <li>
+
+                Não significa que 32 séries sejam
+                melhores que 16 para todos os músculos.
+
+            </li>
+
+
+            <li>
+
+                Não significa que 24 séries sejam
+                obrigatoriamente melhores que 16.
+
+            </li>
+
+
+            <li>
+
+                Não significa que aumentar o volume
+                indefinidamente continuará aumentando
+                a hipertrofia na mesma proporção.
+
+            </li>
+
+
+            <li>
+
+                Não significa que uma pessoa deva
+                aumentar imediatamente seu treinamento
+                para 32 séries semanais.
+
+            </li>
+
+        </ul>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         LIMITAÇÕES
+    ========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            LIMITAÇÕES
+
+        </div>
+
+
+        <h2>
+
+            Onde devemos ter cuidado?
+
+        </h2>
+
+
+        <p>
+
+            O estudo apresenta uma comparação
+            interessante entre diferentes doses de
+            volume, mas seus resultados precisam
+            ser interpretados dentro das características
+            da pesquisa.
+
+        </p>
+
+
+        <ul class="analysis-list">
+
+            <li>
+
+                A amostra foi relativamente pequena.
+
+            </li>
+
+
+            <li>
+
+                Os participantes eram homens com
+                experiência prévia em treinamento
+                resistido.
+
+            </li>
+
+
+            <li>
+
+                A intervenção teve duração de apenas
+                oito semanas.
+
+            </li>
+
+
+            <li>
+
+                Os resultados não foram idênticos
+                para todas as regiões musculares.
+
+            </li>
+
+
+            <li>
+
+                O estudo não permite estabelecer
+                um volume ótimo universal.
+
+            </li>
+
+        </ul>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         ANÁLISE MIKADESH
+    ========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            ANÁLISE MIKADESH
+
+        </div>
+
+
+        <div class="analysis">
+
+
+            <h2>
+
+                Como interpretar este estudo?
+
+            </h2>
+
+
+            <p>
+
+                Este estudo é interessante porque
+                coloca números bastante altos de
+                volume diretamente frente a frente.
+
+            </p>
+
+
+            <p>
+
+                Não estamos comparando uma pessoa
+                sedentária com alguém que treina.
+                Estamos comparando indivíduos treinados
+                realizando 16, 24 ou 32 séries semanais.
+
+            </p>
+
+
+            <p>
+
+                O resultado mostra que o aumento do
+                volume ainda pode produzir adaptações
+                adicionais mesmo em indivíduos treinados.
+
+            </p>
+
+
+            <p>
+
+                Entretanto, o fato de 32 séries terem
+                apresentado vantagem em algumas medidas
+                não significa que o maior volume seja
+                automaticamente a melhor escolha.
+
+            </p>
+
+
+            <div class="highlight">
+
+                <p>
+
+                    <strong>
+
+                        A interpretação mais adequada
+                        é que existe potencial para
+                        benefícios adicionais com
+                        volumes altos, mas a magnitude
+                        desses benefícios depende do
+                        músculo, do indivíduo e do
+                        contexto do treinamento.
+
+                    </strong>
+
+                </p>
+
+            </div>
+
+
+            <p>
+
+                Quando colocamos este resultado junto
+                às revisões anteriores da Biblioteca,
+                surge uma imagem mais coerente:
+
+                mais volume pode aumentar a hipertrofia,
+                mas os retornos tendem a diminuir e
+                volumes muito altos não garantem
+                vantagens proporcionais.
+
+            </p>
+
+
+            <p>
+
+                Portanto, o objetivo da prescrição
+                não deve ser simplesmente acumular
+                o maior número possível de séries,
+                mas encontrar uma quantidade de
+                trabalho que possa ser realizada
+                com qualidade e sustentada ao longo
+                do tempo.
+
+            </p>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CONCLUSÃO
+    ========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            CONCLUSÃO
+
+        </div>
+
+
+        <div class="conclusion">
+
+
+            <h2>
+
+                O que podemos levar deste estudo?
+
+            </h2>
+
+
+            <p>
+
+                Homens treinados que realizaram
+                16, 24 ou 32 séries semanais
+                apresentaram aumentos de força e
+                espessura muscular após oito semanas.
+
+            </p>
+
+
+            <p>
+
+                O grupo de 32 séries apresentou
+                maiores aumentos em algumas medidas
+                de espessura muscular quando comparado
+                ao grupo de 16 séries.
+
+            </p>
+
+
+            <p>
+
+                Isso reforça a ideia de que volumes
+                elevados podem produzir benefícios
+                adicionais em determinadas situações.
+
+            </p>
+
+
+            <p>
+
+                Porém, os resultados não sustentam
+                a ideia de que 32 séries sejam
+                universalmente superiores.
+
+            </p>
+
+
+            <p>
+
+                <strong>
+
+                    Mais volume pode ajudar, mas o
+                    melhor volume não é necessariamente
+                    o maior volume possível.
+
+                </strong>
+
+            </p>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FONTE
+    ========================= -->
+
+    <section class="section">
+
+
+        <div class="section-label">
+
+            FONTE ORIGINAL
+
+        </div>
+
+
+        <div class="source">
+
+
+            <p>
+
+                Brigatto FA, Lima LEdM,
+                Germano MD, Aoki MS,
+                Braz TV, Lopes CR.
+
+            </p>
+
+
+            <p>
+
+                <strong>
+
+                    High Resistance-Training Volume
+                    Enhances Muscle Thickness in
+                    Resistance-Trained Men.
+
+                </strong>
+
+            </p>
+
+
+            <p>
+
+                Journal of Strength and Conditioning
+                Research. 2022.
+
+            </p>
+
+
+            <a
+            href="https://pubmed.ncbi.nlm.nih.gov/31868813/"
+            target="_blank"
+            >
+
+                → Ver estudo no PubMed
+
+            </a>
+
+
+        </div>
+
+    </section>
 
 
 </main>
 
+
+
+<!-- =========================
+     RODAPÉ
+========================= -->
 
 <footer>
 
