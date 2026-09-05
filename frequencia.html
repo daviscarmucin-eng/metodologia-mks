@@ -5,106 +5,97 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
 
 <title>Frequência — Biblioteca Científica</title>
 
+
 <style>
 
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
 *{
-
     margin:0;
-
     padding:0;
-
     box-sizing:border-box;
-
 }
 
 body{
-
     font-family:Arial, Helvetica, sans-serif;
-
     background:#0b0b0b;
-
     color:#fff;
-
-    line-height:1.7;
-
 }
 
+
+/* =========================
+   NAVEGAÇÃO
+========================= */
+
 nav{
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
 
     padding:18px 6%;
 
     background:#0b0b0b;
-
     border-bottom:1px solid #222;
-
 }
 
 .logo{
-
     font-size:20px;
-
     font-weight:bold;
-
 }
 
 .logo span{
-
     color:#18b15a;
-
 }
 
 nav ul{
-
     display:flex;
-
     gap:30px;
-
     list-style:none;
-
 }
 
 nav a{
-
     color:#ccc;
-
     text-decoration:none;
-
     font-size:14px;
-
     font-weight:bold;
-
     transition:.3s;
-
 }
 
 nav a:hover{
-
     color:#18b15a;
-
 }
+
+
+/* =========================
+   CONTEÚDO PRINCIPAL
+========================= */
 
 main{
-
-    max-width:1000px;
-
+    max-width:1200px;
     margin:auto;
-
-    padding:80px 20px 100px;
-
+    padding:90px 20px;
 }
 
-.back{
 
+.tag{
+    color:#18b15a;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:3px;
+    margin-bottom:15px;
+}
+
+
+.back{
     display:inline-block;
 
     margin-bottom:35px;
@@ -116,64 +107,59 @@ main{
     font-size:14px;
 
     transition:.3s;
-
 }
 
 .back:hover{
-
     color:#18b15a;
-
 }
 
-.tag{
-
-    color:#18b15a;
-
-    font-size:13px;
-
-    font-weight:bold;
-
-    letter-spacing:3px;
-
-    margin-bottom:15px;
-
-}
 
 h1{
+    font-size:58px;
+    margin-bottom:20px;
+}
 
-    font-size:54px;
 
-    line-height:1.1;
+.intro{
+    color:#aaa;
+    font-size:18px;
+    max-width:750px;
+    margin-bottom:60px;
+}
 
-    max-width:850px;
+
+/* =========================
+   ESTUDOS
+========================= */
+
+.section-title{
+
+    font-size:14px;
+
+    color:#18b15a;
+
+    letter-spacing:2px;
 
     margin-bottom:20px;
-
 }
 
-.subtitle{
-
-    color:#aaa;
-
-    font-size:18px;
-
-    max-width:760px;
-
-    margin-bottom:60px;
-
-}
 
 .study-grid{
 
     display:grid;
 
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:
+    repeat(2,1fr);
 
-    gap:20px;
-
+    gap:15px;
 }
 
+
 .study-card{
+
+    min-height:300px;
+
+    padding:30px;
 
     background:#141414;
 
@@ -181,71 +167,73 @@ h1{
 
     border-radius:12px;
 
-    padding:30px;
+    display:flex;
+
+    flex-direction:column;
 
     transition:.3s;
-
 }
+
 
 .study-card:hover{
 
+    transform:translateY(-6px);
+
     border-color:#18b15a;
 
-    transform:translateY(-3px);
-
+    background:#171717;
 }
+
 
 .number{
 
     color:#18b15a;
 
-    font-size:14px;
+    font-size:13px;
 
     font-weight:bold;
 
-    letter-spacing:2px;
-
-    margin-bottom:18px;
-
+    margin-bottom:auto;
 }
+
 
 .study-card h2{
 
-    font-size:25px;
+    font-size:26px;
 
-    line-height:1.2;
+    line-height:1.15;
 
     margin-bottom:14px;
-
 }
+
 
 .study-type{
 
     color:#18b15a;
 
-    font-size:12px;
+    font-size:13px;
 
     font-weight:bold;
 
-    letter-spacing:1px;
-
-    margin-bottom:18px;
-
+    margin-bottom:14px;
 }
+
 
 .study-card p{
 
-    color:#aaa;
+    color:#999;
 
-    font-size:16px;
+    font-size:14px;
+
+    line-height:1.6;
 
     margin-bottom:25px;
-
 }
+
 
 .study-link{
 
-    color:#18b15a;
+    color:#fff;
 
     text-decoration:none;
 
@@ -254,14 +242,18 @@ h1{
     font-weight:bold;
 
     transition:.3s;
-
 }
+
 
 .study-link:hover{
 
-    color:#fff;
-
+    color:#18b15a;
 }
+
+
+/* =========================
+   RODAPÉ
+========================= */
 
 footer{
 
@@ -274,8 +266,12 @@ footer{
     color:#777;
 
     font-size:13px;
-
 }
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
 
 @media(max-width:800px){
 
@@ -284,31 +280,24 @@ footer{
         flex-direction:column;
 
         gap:15px;
-
     }
+
 
     nav ul{
 
         gap:15px;
-
     }
 
-    main{
-
-        padding-top:60px;
-
-    }
 
     h1{
 
-        font-size:40px;
-
+        font-size:42px;
     }
+
 
     .study-grid{
 
         grid-template-columns:1fr;
-
     }
 
 }
@@ -321,339 +310,369 @@ footer{
 <body>
 
 
+<!-- =========================
+     NAVEGAÇÃO
+========================= -->
+
 <nav>
 
-<div class="logo">
+    <div class="logo">
 
-METODOLOGIA <span>MKS</span>
+        METODOLOGIA
+        <span>MKS</span>
 
-</div>
-
-
-<ul>
-
-<li>
-
-<a href="biblioteca.html">
-
-Biblioteca
-
-</a>
-
-</li>
+    </div>
 
 
-<li>
+    <ul>
 
-<a href="consultoria.html">
+        <li>
 
-Consultoria
+            <a href="biblioteca.html">
+                Biblioteca
+            </a>
 
-</a>
-
-</li>
+        </li>
 
 
-<li>
+        <li>
 
-<a href="industries.html">
+            <a href="consultoria.html">
+                Consultoria
+            </a>
 
-Industries
+        </li>
 
-</a>
 
-</li>
+        <li>
 
-</ul>
+            <a href="industries.html">
+                Industries
+            </a>
+
+        </li>
+
+    </ul>
 
 </nav>
 
 
+
+<!-- =========================
+     CONTEÚDO
+========================= -->
+
 <main>
 
 
-<div class="tag">
+    <div class="tag">
 
-02 / FREQUÊNCIA
+        02 / BIBLIOTECA CIENTÍFICA
 
-</div>
+    </div>
 
 
-<a
-href="biblioteca.html"
-class="back"
->
+    <a
+    href="biblioteca.html"
+    class="back"
+    >
 
-← Voltar para Biblioteca
+        ← Voltar para a Biblioteca
 
-</a>
+    </a>
 
 
-<h1>
+    <h1>
 
-Frequência de Treino
+        Frequência de Treino
 
-</h1>
+    </h1>
 
 
-<p class="subtitle">
+    <p class="intro">
 
-Como a distribuição do treinamento ao longo da semana influencia hipertrofia, força, recuperação e desempenho.
+        Estudos e análises sobre a distribuição
+        do treinamento ao longo da semana e seus
+        efeitos sobre hipertrofia, força,
+        recuperação e desempenho.
 
-</p>
+    </p>
 
 
-<div class="study-grid">
 
+    <!-- =========================
+         ESTUDOS
+    ========================= -->
 
-<!-- ESTUDO 01 -->
+    <div class="section-title">
 
-<div class="study-card">
+        ESTUDOS DISPONÍVEIS
 
-<div class="number">
+    </div>
 
-01
 
-</div>
 
+    <div class="study-grid">
 
-<h2>
 
-Quantas vezes por semana devemos treinar cada músculo?
+        <!-- ESTUDO 01 -->
 
-</h2>
+        <div class="study-card">
 
 
-<div class="study-type">
+            <div class="number">
 
-REVISÃO SISTEMÁTICA + META-ANÁLISE • 2019
+                01
 
-</div>
+            </div>
 
 
-<p>
+            <h2>
 
-Uma meta-análise avaliou se aumentar a frequência
-semanal de treinamento produz maiores ganhos de
-hipertrofia quando o volume de treinamento é
-considerado.
+                Quantas vezes por semana devemos treinar cada músculo?
 
-</p>
+            </h2>
 
 
-<a
-href="#"
-class="study-link"
->
+            <div class="study-type">
 
-→ Ler análise
+                REVISÃO SISTEMÁTICA + META-ANÁLISE • 2019
 
-</a>
+            </div>
 
-</div>
 
+            <p>
 
+                Uma análise sobre a relação entre
+                frequência semanal e hipertrofia
+                muscular.
 
-<!-- ESTUDO 02 -->
+            </p>
 
-<div class="study-card">
 
-<div class="number">
+            <a
+            href="estudo-frequencia-01.html"
+            class="study-link"
+            >
 
-02
+                → Ler análise
 
-</div>
+            </a>
 
 
-<h2>
+        </div>
 
-A frequência importa quando o volume é igual?
 
-</h2>
 
+        <!-- ESTUDO 02 -->
 
-<div class="study-type">
+        <div class="study-card">
 
-ENSAIO CLÍNICO RANDOMIZADO • 2022
 
-</div>
+            <div class="number">
 
+                02
 
-<p>
+            </div>
 
-Um estudo experimental comparou diferentes
-frequências de treinamento mantendo o volume
-semanal equivalente para investigar seus efeitos
-sobre hipertrofia e força.
 
-</p>
+            <h2>
 
+                A frequência importa quando o volume é igual?
 
-<a
-href="#"
-class="study-link"
->
+            </h2>
 
-→ Ler análise
 
-</a>
+            <div class="study-type">
 
-</div>
+                ENSAIO CLÍNICO RANDOMIZADO • 2022
 
+            </div>
 
 
-<!-- ESTUDO 03 -->
+            <p>
 
-<div class="study-card">
+                O que acontece quando diferentes
+                frequências são comparadas mantendo
+                o mesmo volume semanal?
 
-<div class="number">
+            </p>
 
-03
 
-</div>
+            <a
+            href="estudo-frequencia-02.html"
+            class="study-link"
+            >
 
+                → Ler análise
 
-<h2>
+            </a>
 
-Existe um limite para o volume em uma única sessão?
 
-</h2>
+        </div>
 
 
-<div class="study-type">
 
-REVISÃO SISTEMÁTICA + META-ANÁLISE • 2020
+        <!-- ESTUDO 03 -->
 
-</div>
+        <div class="study-card">
 
 
-<p>
+            <div class="number">
 
-Uma análise ampla investigou como características
-do treinamento, incluindo o número de séries por
-sessão, podem influenciar as adaptações de
-hipertrofia muscular.
+                03
 
-</p>
+            </div>
 
 
-<a
-href="#"
-class="study-link"
->
+            <h2>
 
-→ Ler análise
+                Existe um limite para o volume em uma única sessão?
 
-</a>
+            </h2>
 
-</div>
 
+            <div class="study-type">
 
+                REVISÃO SISTEMÁTICA + META-ANÁLISE • 2020
 
-<!-- ESTUDO 04 -->
+            </div>
 
-<div class="study-card">
 
-<div class="number">
+            <p>
 
-04
+                Uma análise sobre quanto volume pode
+                ser realizado em uma sessão antes que
+                sua eficiência possa diminuir.
 
-</div>
+            </p>
 
 
-<h2>
+            <a
+            href="estudo-frequencia-03.html"
+            class="study-link"
+            >
 
-É melhor concentrar ou espalhar o treinamento?
+                → Ler análise
 
-</h2>
+            </a>
 
 
-<div class="study-type">
+        </div>
 
-ENSAIO CLÍNICO RANDOMIZADO • 2018
 
-</div>
 
+        <!-- ESTUDO 04 -->
 
-<p>
+        <div class="study-card">
 
-Um estudo comparou diferentes formas de distribuir
-o mesmo volume semanal de treinamento ao longo
-da semana e avaliou seus efeitos sobre composição
-corporal e desempenho.
 
-</p>
+            <div class="number">
 
+                04
 
-<a
-href="#"
-class="study-link"
->
+            </div>
 
-→ Ler análise
 
-</a>
+            <h2>
 
-</div>
+                É melhor concentrar ou espalhar o treinamento?
 
+            </h2>
 
 
-<!-- ESTUDO 05 -->
+            <div class="study-type">
 
-<div class="study-card">
+                ENSAIO CLÍNICO RANDOMIZADO • 2018
 
-<div class="number">
+            </div>
 
-05
 
-</div>
+            <p>
 
+                O que acontece quando o mesmo volume
+                semanal é distribuído em diferentes
+                quantidades de sessões?
 
-<h2>
+            </p>
 
-Frequência, recuperação e desempenho
 
-</h2>
+            <a
+            href="estudo-frequencia-04.html"
+            class="study-link"
+            >
 
+                → Ler análise
 
-<div class="study-type">
+            </a>
 
-UMBRELLA REVIEW • 2023
 
-</div>
+        </div>
 
 
-<p>
 
-Uma revisão de revisões sistemáticas analisou como
-diferentes variáveis da prescrição do treinamento,
-incluindo a frequência, influenciam massa muscular,
-força e função física.
+        <!-- ESTUDO 05 -->
 
-</p>
+        <div class="study-card">
 
 
-<a
-href="#"
-class="study-link"
->
+            <div class="number">
 
-→ Ler análise
+                05
 
-</a>
+            </div>
 
-</div>
 
+            <h2>
 
-</div>
+                Frequência, recuperação e desempenho
+
+            </h2>
+
+
+            <div class="study-type">
+
+                UMBRELLA REVIEW • 2023
+
+            </div>
+
+
+            <p>
+
+                Como a frequência de treinamento pode
+                influenciar recuperação, força e
+                desempenho.
+
+            </p>
+
+
+            <a
+            href="estudo-frequencia-05.html"
+            class="study-link"
+            >
+
+                → Ler análise
+
+            </a>
+
+
+        </div>
+
+
+    </div>
 
 
 </main>
 
 
+
+<!-- =========================
+     RODAPÉ
+========================= -->
+
 <footer>
 
-© 2026 Metodologia MKS
+    © 2026 Metodologia MKS
 
 </footer>
 
