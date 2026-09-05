@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Frequência — Biblioteca Científica</title>
+
+<style>
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:#0b0b0b;
+
+    color:#fff;
+
+    line-height:1.7;
+
+}
+
+nav{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 6%;
+
+    background:#0b0b0b;
+
+    border-bottom:1px solid #222;
+
+}
+
+.logo{
+
+    font-size:20px;
+
+    font-weight:bold;
+
+}
+
+.logo span{
+
+    color:#18b15a;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    gap:30px;
+
+    list-style:none;
+
+}
+
+nav a{
+
+    color:#ccc;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:#18b15a;
+
+}
+
+main{
+
+    max-width:1000px;
+
+    margin:auto;
+
+    padding:80px 20px 100px;
+
+}
+
+.back{
+
+    display:inline-block;
+
+    margin-bottom:35px;
+
+    color:#888;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    transition:.3s;
+
+}
+
+.back:hover{
+
+    color:#18b15a;
+
+}
+
+.tag{
+
+    color:#18b15a;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    letter-spacing:3px;
+
+    margin-bottom:15px;
+
+}
+
+h1{
+
+    font-size:54px;
+
+    line-height:1.1;
+
+    max-width:850px;
+
+    margin-bottom:20px;
+
+}
+
+.subtitle{
+
+    color:#aaa;
+
+    font-size:18px;
+
+    max-width:760px;
+
+    margin-bottom:60px;
+
+}
+
+.study-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+.study-card{
+
+    background:#141414;
+
+    border:1px solid #242424;
+
+    border-radius:12px;
+
+    padding:30px;
+
+    transition:.3s;
+
+}
+
+.study-card:hover{
+
+    border-color:#18b15a;
+
+    transform:translateY(-3px);
+
+}
+
+.number{
+
+    color:#18b15a;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+    letter-spacing:2px;
+
+    margin-bottom:18px;
+
+}
+
+.study-card h2{
+
+    font-size:25px;
+
+    line-height:1.2;
+
+    margin-bottom:14px;
+
+}
+
+.study-type{
+
+    color:#18b15a;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+    margin-bottom:18px;
+
+}
+
+.study-card p{
+
+    color:#aaa;
+
+    font-size:16px;
+
+    margin-bottom:25px;
+
+}
+
+.study-link{
+
+    color:#18b15a;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.study-link:hover{
+
+    color:#fff;
+
+}
+
+footer{
+
+    text-align:center;
+
+    padding:30px;
+
+    border-top:1px solid #222;
+
+    color:#777;
+
+    font-size:13px;
+
+}
+
+@media(max-width:800px){
+
+    nav{
+
+        flex-direction:column;
+
+        gap:15px;
+
+    }
+
+    nav ul{
+
+        gap:15px;
+
+    }
+
+    main{
+
+        padding-top:60px;
+
+    }
+
+    h1{
+
+        font-size:40px;
+
+    }
+
+    .study-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<nav>
+
+<div class="logo">
+
+METODOLOGIA <span>MKS</span>
+
+</div>
+
+
+<ul>
+
+<li>
+
+<a href="biblioteca.html">
+
+Biblioteca
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="consultoria.html">
+
+Consultoria
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="industries.html">
+
+Industries
+
+</a>
+
+</li>
+
+</ul>
+
+</nav>
+
+
+<main>
+
+
+<div class="tag">
+
+02 / FREQUÊNCIA
+
+</div>
+
+
+<a
+href="biblioteca.html"
+class="back"
+>
+
+← Voltar para Biblioteca
+
+</a>
+
+
+<h1>
+
+Frequência de Treino
+
+</h1>
+
+
+<p class="subtitle">
+
+Como a distribuição do treinamento ao longo da semana influencia hipertrofia, força, recuperação e desempenho.
+
+</p>
+
+
+<div class="study-grid">
+
+
+<!-- ESTUDO 01 -->
+
+<div class="study-card">
+
+<div class="number">
+
+01
+
+</div>
+
+
+<h2>
+
+Quantas vezes por semana devemos treinar cada músculo?
+
+</h2>
+
+
+<div class="study-type">
+
+REVISÃO SISTEMÁTICA + META-ANÁLISE • 2019
+
+</div>
+
+
+<p>
+
+Uma meta-análise avaliou se aumentar a frequência
+semanal de treinamento produz maiores ganhos de
+hipertrofia quando o volume de treinamento é
+considerado.
+
+</p>
+
+
+<a
+href="#"
+class="study-link"
+>
+
+→ Ler análise
+
+</a>
+
+</div>
+
+
+
+<!-- ESTUDO 02 -->
+
+<div class="study-card">
+
+<div class="number">
+
+02
+
+</div>
+
+
+<h2>
+
+A frequência importa quando o volume é igual?
+
+</h2>
+
+
+<div class="study-type">
+
+ENSAIO CLÍNICO RANDOMIZADO • 2022
+
+</div>
+
+
+<p>
+
+Um estudo experimental comparou diferentes
+frequências de treinamento mantendo o volume
+semanal equivalente para investigar seus efeitos
+sobre hipertrofia e força.
+
+</p>
+
+
+<a
+href="#"
+class="study-link"
+>
+
+→ Ler análise
+
+</a>
+
+</div>
+
+
+
+<!-- ESTUDO 03 -->
+
+<div class="study-card">
+
+<div class="number">
+
+03
+
+</div>
+
+
+<h2>
+
+Existe um limite para o volume em uma única sessão?
+
+</h2>
+
+
+<div class="study-type">
+
+REVISÃO SISTEMÁTICA + META-ANÁLISE • 2020
+
+</div>
+
+
+<p>
+
+Uma análise ampla investigou como características
+do treinamento, incluindo o número de séries por
+sessão, podem influenciar as adaptações de
+hipertrofia muscular.
+
+</p>
+
+
+<a
+href="#"
+class="study-link"
+>
+
+→ Ler análise
+
+</a>
+
+</div>
+
+
+
+<!-- ESTUDO 04 -->
+
+<div class="study-card">
+
+<div class="number">
+
+04
+
+</div>
+
+
+<h2>
+
+É melhor concentrar ou espalhar o treinamento?
+
+</h2>
+
+
+<div class="study-type">
+
+ENSAIO CLÍNICO RANDOMIZADO • 2018
+
+</div>
+
+
+<p>
+
+Um estudo comparou diferentes formas de distribuir
+o mesmo volume semanal de treinamento ao longo
+da semana e avaliou seus efeitos sobre composição
+corporal e desempenho.
+
+</p>
+
+
+<a
+href="#"
+class="study-link"
+>
+
+→ Ler análise
+
+</a>
+
+</div>
+
+
+
+<!-- ESTUDO 05 -->
+
+<div class="study-card">
+
+<div class="number">
+
+05
+
+</div>
+
+
+<h2>
+
+Frequência, recuperação e desempenho
+
+</h2>
+
+
+<div class="study-type">
+
+UMBRELLA REVIEW • 2023
+
+</div>
+
+
+<p>
+
+Uma revisão de revisões sistemáticas analisou como
+diferentes variáveis da prescrição do treinamento,
+incluindo a frequência, influenciam massa muscular,
+força e função física.
+
+</p>
+
+
+<a
+href="#"
+class="study-link"
+>
+
+→ Ler análise
+
+</a>
+
+</div>
+
+
+</div>
+
+
+</main>
+
+
+<footer>
+
+© 2026 Metodologia MKS
+
+</footer>
+
+
+</body>
+
+</html>
